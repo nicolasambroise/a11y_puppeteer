@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Audit A11Y</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+  body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 900px) {
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+
+  .criticity-box {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.2rem;
+  }
+
+  .yellow { color: #FFC107; }
+  .orange { color: #FF9800; }
+  .red { color: #F44336; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+
+  table th, table td {
+    padding: .5rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .trend-up { color: #4CAF50; font-weight: bold; }
+  .trend-down { color: #F44336; font-weight: bold; }
+  .trend-equal { color: #999; font-weight: bold; }
+</style>
+</head>
+
+<body>
+
+<h1>Dashboard Audit A11Y</h1>
+
+<div id="summary" class="grid grid-3"></div>
+
+<h2>Évolution historique</h2>
+<canvas id="chartEvolution" height="100"></canvas>
+
+<h2>Top pages par criticité</h2>
+<div id="topPages" class="grid grid-3"></div>
+
+<h2>Problèmes les plus fréquents par criticité</h2>
+<div id="topProblemsContainer" class="grid grid-3"></div>
+
+<script>
+async function loadReports() {
+  const files = await fetch('../reports/')
+    .then(r => r.text());
+
+  const jsonFiles = [...files.matchAll(/report-[\d\-]+\.json/g)]
+    .map(m => m[0])
+    .sort();
+
+  const reports = [];
+  console.log(jsonFiles);
+  for (const file of jsonFiles) {
+    const data = await fetch('../reports/' + file).then(r => r.json());
+    reports.push({ file, ...data });
+  }
+
+  return reports;
+}
+
+function trendIcon(diff) {
+  if (diff > 0) return `<span class="trend-up">↑</span>`;
+  if (diff < 0) return `<span class="trend-down">↓</span>`;
+  return `<span class="trend-equal">=</span>`;
+}
+
+function renderSummary(latest) {
+  const container = document.getElementById('summary');
+
+  container.innerHTML = `
+    <div class="card">
+      <div class="criticity-box yellow">🟡 Criticité 1</div>
+      <p>Total : <strong>${latest.totals[1]}</strong></p>
+      ${latest.trend ? `Tendance : ${trendIcon(latest.trend[1].diff)} (${latest.trend[1].diff})` : ''}
+    </div>
+
+    <div class="card">
+      <div class="criticity-box orange">🟠 Criticité 2</div>
+      <p>Total : <strong>${latest.totals[2]}</strong></p>
+      ${latest.trend ? `Tendance : ${trendIcon(latest.trend[2].diff)} (${latest.trend[2].diff})` : ''}
+    </div>
+
+    <div class="card">
+      <div class="criticity-box red">🔴 Criticité 3</div>
+      <p>Total : <strong>${latest.totals[3]}</strong></p>
+      ${latest.trend ? `Tendance : ${trendIcon(latest.trend[3].diff)} (${latest.trend[3].diff})` : ''}
+    </div>
+  `;
+}
+
+function renderTopPages(latest) {
+  const container = document.getElementById('topPages');
+
+  function tableFor(list) {
+    return `
+      <table>
+        <tr><th>Page</th><th>Nb</th></tr>
+        ${list.map(p => `
+          <tr>
+            <td>${p.title}<br><small>${p.url}</small></td>
+            <td><strong>${p.count}</strong></td>
+          </tr>
+        `).join('')}
+      </table>
+    `;
+  }
+
+  container.innerHTML = `
+    <div class="card">
+      <h3>Criticité 1</h3>
+      ${tableFor(latest.topPages.criticity1)}
+    </div>
+
+    <div class="card">
+      <h3>Criticité 2</h3>
+      ${tableFor(latest.topPages.criticity2)}
+    </div>
+
+    <div class="card">
+      <h3>Criticité 3</h3>
+      ${tableFor(latest.topPages.criticity3)}
+    </div>
+  `;
+}
+
+function renderTopProblems(latest) {
+  const container = document.getElementById('topProblemsContainer');
+
+  function tableFor(list, colorName, colorClass) {
+    return `
+      <div class="card">
+        <h3 class="${colorClass}">Criticité ${colorName}</h3>
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Message</th>
+            <th>Occurrences</th>
+          </tr>
+          ${list.map(p => `
+            <tr>
+              <td>${p.code}</td>
+              <td>${p.message}</td>
+              <td><strong>${p.count}</strong></td>
+            </tr>
+          `).join('')}
+        </table>
+      </div>
+    `;
+  }
+
+  const c1 = latest.topProblems.filter(p => p.criticity === 1);
+  const c2 = latest.topProblems.filter(p => p.criticity === 2);
+  const c3 = latest.topProblems.filter(p => p.criticity === 3);
+
+  container.innerHTML = `
+    ${tableFor(c3, "3 (rouge)", "red")}
+    ${tableFor(c2, "2 (orange)", "orange")}
+    ${tableFor(c1, "1 (jaune)", "yellow")}
+  `;
+}
+
+
+function renderEvolution(reports) {
+  const labels = reports.map(r => r.generatedAt);
+  const c1 = reports.map(r => r.totals[1]);
+  const c2 = reports.map(r => r.totals[2]);
+  const c3 = reports.map(r => r.totals[3]);
+
+  new Chart(document.getElementById('chartEvolution'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Criticité 1', data: c1, borderColor: '#FFC107', tension: .2 },
+        { label: 'Criticité 2', data: c2, borderColor: '#FF9800', tension: .2 },
+        { label: 'Criticité 3', data: c3, borderColor: '#F44336', tension: .2 }
+      ]
+    }
+  });
+}
+
+(async () => {
+  const reports = await loadReports();
+  const latest = reports[reports.length - 1];
+
+  renderSummary(latest);
+  renderTopPages(latest);
+  renderTopProblems(latest);
+  renderEvolution(reports);
+})();
+</script>
+
+</body>
+</html>

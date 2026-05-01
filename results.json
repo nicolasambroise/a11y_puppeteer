@@ -1,0 +1,4511 @@
+[
+  {
+    "id": 6,
+    "url": "https://adem.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "ADEM - FACILITONS L’EMPLOI - Luxembourg",
+    "lang": "FR",
+    "title": "ADEM - FACILITONS L'EMPLOI - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "Le premier élément informatif dans le DOM de chaque item doit être le titre"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 7,
+    "url": "https://agriculture.public.lu/de.html",
+    "iso": "DE",
+    "originalTitle": "Landwirtschaftsportal - Luxembourg",
+    "lang": "DE",
+    "title": "Landwirtschaftsportal - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "Le premier élément informatif dans le DOM de chaque item doit être le titre"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 62,
+    "url": "https://aop.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "AOP - Luxembourg",
+    "lang": "FR",
+    "title": "AOP - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 63,
+    "url": "https://armee.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Armée luxembourgeoise - Luxembourg",
+    "lang": "FR",
+    "title": "Armée luxembourgeoise - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 64,
+    "url": "https://bnl.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Bibliothèque nationale (BnL) - Luxembourg",
+    "lang": "FR",
+    "title": "Bibliothèque nationale (BnL) - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+        }
+      ],
+      "3": [
+        {
+          "code": "03-E\n                     Color red",
+          "message": "Présence de liens dont l'attribut title ne reprend pas le contenu textuel [RAWeb 6.1.5]"
+        }
+      ]
+    }
+  },
+  {
+    "id": 68,
+    "url": "https://ccdh.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Commission Consultative des Droits de l’Homme - Luxembourg",
+    "lang": "FR",
+    "title": "Commission Consultative des Droits de l'Homme - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 69,
+    "url": "https://ccss.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "CCSS (Centre commun de la sécurité sociale) - Luxembourg",
+    "lang": "FR",
+    "title": "CCSS (Centre commun de la sécurité sociale) - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 74,
+    "url": "https://cmfep.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Caisse de Maladie des Fonctionnaires et Employés Publics - Luxembourg",
+    "lang": "FR",
+    "title": "Caisse de Maladie des Fonctionnaires et Employés Publics - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 75,
+    "url": "https://cna.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Centre national de l’audiovisuel - Luxembourg",
+    "lang": "FR",
+    "title": "Centre national de l'audiovisuel - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "Le premier élément informatif dans le DOM de chaque item doit être le titre"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 82,
+    "url": "https://cns.public.lu/fr/assure.html",
+    "iso": "FR",
+    "originalTitle": "Assuré - CNS - Luxembourg",
+    "lang": "FR",
+    "title": "Assuré - CNS - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "10-A\n                     Color red",
+          "message": "Présence de balise HTML obsolètes ou servant à la présentation de l'information [RAWeb 10.1.1]"
+        },
+        {
+          "code": "06-A\n                     Color red",
+          "message": "Vérifier qu'il n'y a pas de role sur les container de liste [RAWeb 9.3.1]"
+        }
+      ]
+    }
+  },
+  {
+    "id": 87,
+    "url": "https://cpfec.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Caisse de prévoyance des fonctionnaires et employés communaux - Luxembourg",
+    "lang": "FR",
+    "title": "Caisse de prévoyance des fonctionnaires et employés communaux - Luxembourg - page 1 - Caisse de prévoyance des fonctionnaires et employés communaux - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 90,
+    "url": "https://dcf.extranet.etat.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Direction du contrôle financier - Luxembourg",
+    "lang": "FR",
+    "title": "Direction du contrôle financier - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 92,
+    "url": "https://info-dpi.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Protection internationale - Luxembourg",
+    "lang": "FR",
+    "title": "Protection internationale - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 94,
+    "url": "https://economie-sociale-solidaire.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Portail de l’économie sociale et solidaire – Luxembourg",
+    "lang": "FR",
+    "title": "Portail de l'économie sociale et solidaire – Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 95,
+    "url": "https://efacturation.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "E-facturation - Luxembourg",
+    "lang": "FR",
+    "title": "E-facturation - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 1403,
+    "url": "https://plattform.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Plattform ’ - Luxembourg",
+    "lang": "FR",
+    "title": "Plattform ' - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 104,
+    "url": "https://fns.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Fonds National de Solidarité - Luxembourg",
+    "lang": "FR",
+    "title": "Fonds National de Solidarité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 105,
+    "url": "https://fondskirchberg.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Fonds Kirchberg - Luxembourg",
+    "lang": "FR",
+    "title": "Fonds Kirchberg - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-M\n                     Color orange",
+          "message": "Présence d'une liste d'info de contact dans une adresse Geoportail n'utilisant pas une structure de liste 'dl' [RAWeb 9.3.3]"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+        }
+      ],
+      "3": [
+        {
+          "code": "06-M\n                     Color red",
+          "message": "Présence d'une carte Geoportail sans adresse visible"
+        },
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 107,
+    "url": "https://gimb.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Gesond iessen - Méi bewegen - Luxembourg",
+    "lang": "FR",
+    "title": "Gesond iessen - Méi bewegen - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,7"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 97,
+    "url": "https://enquetes.public.lu/fr.html//fr.html",
+    "iso": "FR",
+    "originalTitle": "Portail national d’enquêtes publiques - Luxembourg",
+    "lang": "FR",
+    "title": "Portail national d'enquêtes publiques - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 213,
+    "url": "https://luxembourg.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Portail du Grand-Duché de Luxembourg",
+    "lang": "FR",
+    "title": "Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 196,
+    "url": "https://guichet.public.lu/fr/citoyens.html",
+    "iso": "FR",
+    "originalTitle": "Citoyens - Guichet.lu - Luxembourg",
+    "lang": "FR",
+    "title": "Citoyens - Guichet.lu - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 199,
+    "url": "https://inaps.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "INAPS - Luxembourg",
+    "lang": "FR",
+    "title": "INAPS - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 202,
+    "url": "https://infosenior.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Infosenior - Luxembourg",
+    "lang": "FR",
+    "title": "Infosenior - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 200,
+    "url": "https://infocrise.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Infocrise - Luxembourg",
+    "lang": "FR",
+    "title": "Infocrise - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 204,
+    "url": "https://inra.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "INRA - Luxembourg",
+    "lang": "FR",
+    "title": "INRA - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 208,
+    "url": "https://kep.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "KEP - Kulturentwécklungsplang 2018-2028 - Luxembourg",
+    "lang": "FR",
+    "title": "KEP - Kulturentwécklungsplang 2018-2028 - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 215,
+    "url": "https://maisonduluxembourg.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Maison du Luxembourg - Luxembourg",
+    "lang": "FR",
+    "title": "Maison du Luxembourg - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "05-F\n                     Color orange",
+          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 209,
+    "url": "https://logement.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Logement.lu - Ministère du Logement - Luxembourg",
+    "lang": "FR",
+    "title": "Logement.lu - Ministère du Logement - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 217,
+    "url": "https://maritime.public.lu/en.html",
+    "iso": "EN",
+    "originalTitle": "Maritime - Luxembourg",
+    "lang": "EN",
+    "title": "Maritime - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 218,
+    "url": "https://mde.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Mutualité des Employeurs - Luxembourg",
+    "lang": "FR",
+    "title": "Mutualité des Employeurs - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 219,
+    "url": "https://mediareform.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Mediareform - Luxembourg",
+    "lang": "FR",
+    "title": "Mediareform - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-B\n                     Color orange",
+          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "05-F\n                     Color orange",
+          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 221,
+    "url": "https://mega.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Egalité des genres et de la Diversité - Luxembourg",
+    "lang": "FR",
+    "title": "Egalité des genres et de la Diversité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 223,
+    "url": "https://mengstudien.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "MengStudien.lu - Luxembourg",
+    "lang": "FR",
+    "title": "MengStudien.lu - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 231,
+    "url": "https://ondes.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Ondes - Luxembourg",
+    "lang": "FR",
+    "title": "Ondes - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 224,
+    "url": "https://menscherechtshaus.public.lu/fr.html//fr.html",
+    "iso": "FR",
+    "originalTitle": "Mënscherechtshaus - Luxembourg",
+    "lang": "FR",
+    "title": "Mënscherechtshaus - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 261,
+    "url": "https://adem.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "",
+    "lang": "FR",
+    "title": "Contact - ADEM - FACILITONS L'EMPLOI - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 239,
+    "url": "https://santesecu.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Portail Santé - Luxembourg",
+    "lang": "FR",
+    "title": "Portail Santé - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 240,
+    "url": "https://securite-alimentaire.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Sécurité alimentaire - Luxembourg",
+    "lang": "FR",
+    "title": "Sécurité alimentaire - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 241,
+    "url": "https://seveso.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Seveso - Luxembourg",
+    "lang": "FR",
+    "title": "Seveso - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 243,
+    "url": "https://www.sig-gr.eu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Système d’information géographique pour la Grande Région",
+    "lang": "FR",
+    "title": "Système d’information géographique pour la Grande Région",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 245,
+    "url": "https://solvit.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "SOLVIT - Luxembourg",
+    "lang": "FR",
+    "title": "SOLVIT - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 246,
+    "url": "https://sports.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Portail du sport - Luxembourg",
+    "lang": "FR",
+    "title": "Portail du sport - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 247,
+    "url": "https://statistiques.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Statistiques - Luxembourg",
+    "lang": "FR",
+    "title": "Statistiques - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "05-F\n                     Color orange",
+          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,3,4,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 251,
+    "url": "https://tresorerie.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Trésorerie de l’Etat - Luxembourg",
+    "lang": "FR",
+    "title": "Trésorerie de l'Etat - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 253,
+    "url": "https://zesummeliewen.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Zesummeliewen - Luxembourg",
+    "lang": "FR",
+    "title": "Zesummeliewen - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 255,
+    "url": "https://zesummendigital.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Zesummendigital - Luxembourg",
+    "lang": "FR",
+    "title": "Zesummendigital - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 258,
+    "url": "https://accessibilite-infrastructure.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Accessibilité à tous des lieux ouverts au public, des voies publiques et des bâtiments d’habitation collectifs",
+    "lang": "FR",
+    "title": "Contact - Accessibilité à tous des lieux ouverts au public, des voies publiques et des bâtiments d'habitation collectifs",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 318,
+    "url": "https://armee.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contactez-nous - Armée luxembourgeoise - Luxembourg",
+    "lang": "FR",
+    "title": "Contactez-nous - Armée luxembourgeoise - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-M\n                     Color orange",
+          "message": "Présence d'une liste d'info de contact dans une adresse Geoportail n'utilisant pas une structure de liste 'dl' [RAWeb 9.3.3]"
+        }
+      ],
+      "3": [
+        {
+          "code": "06-M\n                     Color red",
+          "message": "Présence d'une carte Geoportail sans adresse visible"
+        }
+      ]
+    }
+  },
+  {
+    "id": 320,
+    "url": "https://budget.public.lu/lb/support/contact.html",
+    "iso": "LB",
+    "originalTitle": "Kontakt - Site officiel du Budget de l’Etat - Luxembourg",
+    "lang": "LB",
+    "title": "Kontakt - Site officiel du Budget de l'Etat - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 323,
+    "url": "https://ccdh.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Commission Consultative des Droits de l’Homme - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Commission Consultative des Droits de l'Homme - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 324,
+    "url": "https://ccss.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - CCSS (Centre commun de la sécurité sociale) - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - CCSS (Centre commun de la sécurité sociale) - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 329,
+    "url": "https://cmfep.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Caisse de Maladie des Fonctionnaires et Employés Publics - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Caisse de Maladie des Fonctionnaires et Employés Publics - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 331,
+    "url": "https://cnap.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - CNAP.lu d’Pensiounskeess - Caisse nationale d’assurance Pension - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - CNAP.lu d’Pensiounskeess - Caisse nationale d'assurance Pension - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 780,
+    "url": "https://communales-jepeuxvoter.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Communales - Je peux voter - Luxembourg",
+    "lang": "FR",
+    "title": "Communales - Je peux voter - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-P\n                     Color orange",
+          "message": "Si l’intégralité des items ne contiennent qu’un seul élément textuel celui-ci sera dans une balise paragraphe 'p'"
+        },
+        {
+          "code": "06-P\n                     Color orange",
+          "message": "Les items du grid doivent avoir un contenu"
+        }
+      ],
+      "3": [
+        {
+          "code": "06-A\n                     Color red",
+          "message": "Vérifier qu'il n'y a pas de role sur les container de liste [RAWeb 9.3.1]"
+        }
+      ]
+    }
+  },
+  {
+    "id": 345,
+    "url": "https://dcf.extranet.etat.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Direction du contrôle financier - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Direction du contrôle financier - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 781,
+    "url": "https://communales-jepeuxvoter.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Communales - Je peux voter - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Communales - Je peux voter - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 350,
+    "url": "https://efacturation.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - E-facturation - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - E-facturation - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 352,
+    "url": "https://enquetes.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Portail national d’enquêtes publiques - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Portail national d'enquêtes publiques - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 358,
+    "url": "https://fdc.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Fonds de compensation commun au régime général de pension",
+    "lang": "FR",
+    "title": "Contact - Fonds de compensation commun au régime général de pension",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 359,
+    "url": "https://fns.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Fonds National de Solidarité - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Fonds National de Solidarité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 360,
+    "url": "https://fondskirchberg.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Fonds Kirchberg - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Fonds Kirchberg - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 450,
+    "url": "https://govtechlab.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Nous contacter - Govtech Lab - Luxembourg",
+    "lang": "FR",
+    "title": "Nous contacter - Govtech Lab - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 784,
+    "url": "https://europeennes-jepeuxvoter.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Européennes - Je peux voter - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Européennes - Je peux voter - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 785,
+    "url": "https://europeennes-jepeuxvoter.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Européennes - Je peux voter - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Européennes - Je peux voter - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 454,
+    "url": "https://inaps.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - INAPS - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - INAPS - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 455,
+    "url": "https://infocrise.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Infocrise - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Infocrise - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 459,
+    "url": "https://inra.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - INRA - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - INRA - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 462,
+    "url": "https://kep.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - KEP - Kulturentwécklungsplang 2018-2028 - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - KEP - Kulturentwécklungsplang 2018-2028 - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 463,
+    "url": "https://logement.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Logement.lu - Ministère du Logement - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Logement.lu - Ministère du Logement - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 468,
+    "url": "https://maisonduluxembourg.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Maison du Luxembourg - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Maison du Luxembourg - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 470,
+    "url": "https://maritime.public.lu/en/support/contact.html",
+    "iso": "EN",
+    "originalTitle": "Contact - Maritime - Luxembourg",
+    "lang": "EN",
+    "title": "Contact - Maritime - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 471,
+    "url": "https://mde.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Mutualité des Employeurs - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Mutualité des Employeurs - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 474,
+    "url": "https://mega.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Egalité des genres et de la Diversité - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Egalité des genres et de la Diversité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 477,
+    "url": "https://menscherechtshaus.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Mënscherechtshaus - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Mënscherechtshaus - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 482,
+    "url": "https://ondes.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Ondes - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Ondes - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 510,
+    "url": "https://adem.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "",
+    "lang": "FR",
+    "title": "Accessibilité - ADEM - FACILITONS L'EMPLOI - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 489,
+    "url": "https://santesecu.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Portail Santé - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Portail Santé - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 490,
+    "url": "https://securite-alimentaire.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Sécurité alimentaire - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Sécurité alimentaire - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 491,
+    "url": "https://seveso.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Seveso - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Seveso - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 493,
+    "url": "https://www.sig-gr.eu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Système d’information géographique pour la Grande Région",
+    "lang": "FR",
+    "title": "Contact - Système d’information géographique pour la Grande Région",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 496,
+    "url": "https://sports.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Portail du sport - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Portail du sport - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 497,
+    "url": "https://statistiques.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Statistiques - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Statistiques - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,3,4,5,6"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 788,
+    "url": "https://crf.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - CRF - Cellule de renseignement financier - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - CRF - Cellule de renseignement financier - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 503,
+    "url": "https://zesummeliewen.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Zesummeliewen - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Zesummeliewen - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 504,
+    "url": "https://zesummendigital.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Zesummendigital - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Zesummendigital - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 507,
+    "url": "https://accessibilite-infrastructure.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Accessibilité à tous des lieux ouverts au public, des voies publiques et des bâtiments d’habitation collectifs",
+    "lang": "FR",
+    "title": "Accessibilité - Accessibilité à tous des lieux ouverts au public, des voies publiques et des bâtiments d'habitation collectifs",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 511,
+    "url": "https://agriculture.public.lu/de/support/barrierefreiheit.html",
+    "iso": "DE",
+    "originalTitle": "Barrierefreiheit - Landwirtschaftsportal - Luxembourg",
+    "lang": "DE",
+    "title": "Barrierefreiheit - Landwirtschaftsportal - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 566,
+    "url": "https://aop.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - AOP - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - AOP - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 567,
+    "url": "https://armee.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Armée luxembourgeoise - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Armée luxembourgeoise - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 569,
+    "url": "https://budget.public.lu/lb/support/accessibilite.html",
+    "iso": "LB",
+    "originalTitle": "Accessibilitéit - Site officiel du Budget de l’Etat - Luxembourg",
+    "lang": "LB",
+    "title": "Accessibilitéit - Site officiel du Budget de l'Etat - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 572,
+    "url": "https://ccdh.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Commission Consultative des Droits de l’Homme - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Commission Consultative des Droits de l'Homme - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 578,
+    "url": "https://cmfep.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Caisse de Maladie des Fonctionnaires et Employés Publics - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Caisse de Maladie des Fonctionnaires et Employés Publics - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 579,
+    "url": "https://cna.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Centre national de l’audiovisuel - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Centre national de l'audiovisuel - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 580,
+    "url": "https://cnap.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - CNAP.lu d’Pensiounskeess - Caisse nationale d’assurance Pension - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - CNAP.lu d’Pensiounskeess - Caisse nationale d'assurance Pension - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 596,
+    "url": "https://info-dpi.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Protection internationale - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Protection internationale - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 598,
+    "url": "https://economie-sociale-solidaire.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Portail de l’économie sociale et solidaire – Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Portail de l'économie sociale et solidaire – Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 601,
+    "url": "https://enquetes.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Portail national d’enquêtes publiques - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Portail national d'enquêtes publiques - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 605,
+    "url": "https://etat.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - etat.lu - L’annuaire des sites publics luxembourgeois",
+    "lang": "FR",
+    "title": "Accessibilité - etat.lu - L'annuaire des sites publics luxembourgeois",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 611,
+    "url": "https://gimb.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Gesond iessen - Méi bewegen - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Gesond iessen - Méi bewegen - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,7"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 715,
+    "url": "https://luxembourg.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "",
+    "lang": "FR",
+    "title": "Accessibilité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 700,
+    "url": "https://guichet.public.lu/fr/citoyens/support/accessibilite/accessibilite-guichet.html",
+    "iso": "FR",
+    "originalTitle": "Guichet.lu - Guichet.lu - Luxembourg",
+    "lang": "FR",
+    "title": "Guichet.lu - Guichet.lu - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 701,
+    "url": "https://healthcareers.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Healthcareers - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Healthcareers - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 703,
+    "url": "https://inaps.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - INAPS - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - INAPS - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 704,
+    "url": "https://infocrise.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Infocrise - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Infocrise - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 706,
+    "url": "https://infosenior.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Infosenior - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Infosenior - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 711,
+    "url": "https://kep.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - KEP - Kulturentwécklungsplang 2018-2028 - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - KEP - Kulturentwécklungsplang 2018-2028 - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 719,
+    "url": "https://maritime.public.lu/en/support/accessibilite.html",
+    "iso": "EN",
+    "originalTitle": "Accessibility - Maritime - Luxembourg",
+    "lang": "EN",
+    "title": "Accessibility - Maritime - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 720,
+    "url": "https://mde.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Mutualité des Employeurs - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Mutualité des Employeurs - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 721,
+    "url": "https://mediareform.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Mediareform - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Mediareform - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 726,
+    "url": "https://menscherechtshaus.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Mënscherechtshaus - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Mënscherechtshaus - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 728,
+    "url": "https://interoperabilite.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Portail de l’interopérabilité - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Portail de l'interopérabilité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 731,
+    "url": "https://ondes.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Ondes - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Ondes - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 738,
+    "url": "https://santesecu.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Portail Santé - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Portail Santé - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 740,
+    "url": "https://seveso.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Seveso - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Seveso - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 742,
+    "url": "https://www.sig-gr.eu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Système d’information géographique pour la Grande Région",
+    "lang": "FR",
+    "title": "Accessibilité - Système d’information géographique pour la Grande Région",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 744,
+    "url": "https://solvit.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - SOLVIT - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - SOLVIT - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 745,
+    "url": "https://sports.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Portail du sport - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Portail du sport - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 748,
+    "url": "https://transports.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Transports.lu - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Transports.lu - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°2,3,4,5,6,7,8"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 750,
+    "url": "https://tresorerie.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Trésorerie de l’Etat - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Trésorerie de l'Etat - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 752,
+    "url": "https://zesummeliewen.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Zesummeliewen - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Zesummeliewen - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 65,
+    "url": "https://budget.public.lu/lb.html",
+    "iso": "LB",
+    "originalTitle": "Site officiel du Budget de l’Etat - Luxembourg",
+    "lang": "LB",
+    "title": "Site officiel du Budget de l'Etat - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-F\n                     Color orange",
+          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 790,
+    "url": "https://myasbl.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - myASBL - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - myASBL - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 451,
+    "url": "https://guichet.public.lu/fr/citoyens/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Guichet.lu - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Guichet.lu - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 586,
+    "url": "https://cns.public.lu/fr/assure/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - CNS - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - CNS - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 757,
+    "url": "https://cnj.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Conseil national de la justice",
+    "lang": "FR",
+    "title": "Conseil national de la justice",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 758,
+    "url": "https://lu-alert.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "LU-Alert - Luxembourg",
+    "error": "Waiting for selector `#checkA11YPanel` failed",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 791,
+    "url": "https://myasbl.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - myASBL - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - myASBL - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 767,
+    "url": "https://cnj.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Conseil national de la justice",
+    "lang": "FR",
+    "title": "Contact - Conseil national de la justice",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 768,
+    "url": "https://cnj.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Conseil national de la justice",
+    "lang": "FR",
+    "title": "Accessibilité - Conseil national de la justice",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 772,
+    "url": "https://123easy.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "123EASY - Luxembourg",
+    "lang": "FR",
+    "title": "123EASY - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "05-B\n                     Color orange",
+          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
+        },
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "06-A\n                     Color red",
+          "message": "Vérifier qu'il n'y a pas de role sur les container de liste [RAWeb 9.3.1]"
+        }
+      ]
+    }
+  },
+  {
+    "id": 773,
+    "url": "https://123easy.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - 123EASY - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - 123EASY - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1422,
+    "url": "https://productivite.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Conseil national de la productivité - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Conseil national de la productivité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 71,
+    "url": "https://cepas.public.lu/fr/espace-public.html",
+    "iso": "FR",
+    "originalTitle": "Espace public - CEPAS - Luxembourg",
+    "lang": "FR",
+    "title": "Espace public - CEPAS - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "Le premier élément informatif dans le DOM de chaque item doit être le titre"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 774,
+    "url": "https://accessibilite-produits-services.public.lu//fr.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité des produits et services - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité des produits et services - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 3,
+    "url": "https://accessibilite-infrastructure.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité à tous des lieux ouverts au public, des voies publiques et des bâtiments d’habitation collectifs",
+    "lang": "FR",
+    "title": "Accessibilité à tous des lieux ouverts au public, des voies publiques et des bâtiments d'habitation collectifs",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 777,
+    "url": "https://crf.public.lu//fr.html",
+    "iso": "FR",
+    "originalTitle": "CRF - Cellule de renseignement financier - Luxembourg",
+    "lang": "FR",
+    "title": "CRF - Cellule de renseignement financier - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 73,
+    "url": "https://cmfec.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "CMFEC - Luxembourg",
+    "lang": "FR",
+    "title": "CMFEC - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 76,
+    "url": "https://cnap.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "CNAP.lu d’Pensiounskeess - Caisse nationale d’assurance Pension - Luxembourg",
+    "lang": "FR",
+    "title": "CNAP.lu d’Pensiounskeess - Caisse nationale d'assurance Pension - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 101,
+    "url": "https://etat.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "etat.lu - L’annuaire des sites publics luxembourgeois",
+    "lang": "FR",
+    "title": "etat.lu - L'annuaire des sites publics luxembourgeois",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 476,
+    "url": "https://mengstudien.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - MengStudien.lu - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - MengStudien.lu - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-B\n                     Color orange",
+          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1311,
+    "url": "https://simpa.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Le Service National d’Information et de Médiation pour les Personnes Âgées - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Le Service National d’Information et de Médiation pour les Personnes Âgées - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1408,
+    "url": "https://letzprepare.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Lëtz prepare - Luxembourg",
+    "lang": "FR",
+    "title": "Lëtz prepare - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1409,
+    "url": "https://fluvial.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Portail de la navigation fluviale - Luxembourg",
+    "lang": "FR",
+    "title": "Portail de la navigation fluviale - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-B\n                     Color orange",
+          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1410,
+    "url": "https://fluvial.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Portail de la navigation fluviale - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Portail de la navigation fluviale - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 1411,
+    "url": "https://fluvial.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Portail de la navigation fluviale - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Portail de la navigation fluviale - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1412,
+    "url": "https://mnhn.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Musée national d’histoire naturelle - Luxembourg",
+    "lang": "FR",
+    "title": "Musée national d'histoire naturelle - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "05-B\n                     Color orange",
+          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1418,
+    "url": "https://letzdata.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Letzdata.lu",
+    "lang": "FR",
+    "title": "Letzdata.lu",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 1419,
+    "url": "https://letzdata.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Letzdata.lu",
+    "lang": "FR",
+    "title": "Contact - Letzdata.lu",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 1420,
+    "url": "https://letzdata.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Letzdata.lu",
+    "lang": "FR",
+    "title": "Accessibilité - Letzdata.lu",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 1421,
+    "url": "https://productivite.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Conseil national de la productivité - Luxembourg",
+    "lang": "FR",
+    "title": "Conseil national de la productivité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 1424,
+    "url": "https://saisiepenale.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Saisie pénale - Luxembourg",
+    "lang": "FR",
+    "title": "Saisie pénale - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1425,
+    "url": "https://saisiepenale.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Saisie pénale - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Saisie pénale - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1427,
+    "url": "https://space-agency.public.lu/en.html",
+    "iso": "EN",
+    "originalTitle": "Luxembourg Space Agency",
+    "lang": "EN",
+    "title": "Luxembourg Space Agency",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-F\n                     Color orange",
+          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+        }
+      ],
+      "3": [
+        {
+          "code": "06-A\n                     Color red",
+          "message": "Vérifier qu'il n'y a pas de role sur les container de liste [RAWeb 9.3.1]"
+        }
+      ]
+    }
+  },
+  {
+    "id": 1428,
+    "url": "https://space-agency.public.lu/en/support/accessibility.html",
+    "iso": "EN",
+    "originalTitle": "Accessibility - Luxembourg Space Agency",
+    "lang": "EN",
+    "title": "Accessibility - Luxembourg Space Agency",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-F\n                     Color orange",
+          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 103,
+    "url": "https://fdc.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Fonds de compensation commun au régime général de pension",
+    "lang": "FR",
+    "title": "Fonds de compensation commun au régime général de pension",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 198,
+    "url": "https://igf.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Inspection générale des finances - Intranet",
+    "lang": "FR",
+    "title": "Inspection générale des finances - Intranet",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 776,
+    "url": "https://accessibilite-produits-services.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Accessibilité des produits et services - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Accessibilité des produits et services - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 342,
+    "url": "https://cpfec.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Caisse de prévoyance des fonctionnaires et employés communaux - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Caisse de prévoyance des fonctionnaires et employés communaux - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 599,
+    "url": "https://efacturation.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - E-facturation - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - E-facturation - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 608,
+    "url": "https://fns.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Fonds National de Solidarité - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Fonds National de Solidarité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 717,
+    "url": "https://maisonduluxembourg.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Maison du Luxembourg - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Maison du Luxembourg - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 337,
+    "url": "https://cns.public.lu/fr/assure/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - CNS - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - CNS - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1312,
+    "url": "https://simpa.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Le Service National d’Information et de Médiation pour les Personnes Âgées - Luxembourg",
+    "lang": "FR",
+    "title": "Le Service National d’Information et de Médiation pour les Personnes Âgées - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-B\n                     Color orange",
+          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "11-C\n                     Color orange",
+          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1413,
+    "url": "https://mnhn.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Musée national d’histoire naturelle - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Musée national d'histoire naturelle - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 195,
+    "url": "https://govtechlab.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Govtech Lab - Luxembourg",
+    "lang": "FR",
+    "title": "Govtech Lab - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 228,
+    "url": "https://interoperabilite.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Portail de l’interopérabilité - Luxembourg",
+    "lang": "FR",
+    "title": "Portail de l'interopérabilité - Luxembourg - Portail de l'interopérabilité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 249,
+    "url": "https://transports.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Transports.lu - Luxembourg",
+    "lang": "FR",
+    "title": "Transports.lu - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°2,3,4,5,6,7,8"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 452,
+    "url": "https://healthcareers.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Healthcareers - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Healthcareers - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 472,
+    "url": "https://mediareform.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Mediareform - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Mediareform - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 568,
+    "url": "https://bnl.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Bibliothèque nationale (BnL) - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Bibliothèque nationale (BnL) - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 577,
+    "url": "https://cmfec.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - CMFEC - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - CMFEC - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 609,
+    "url": "https://fondskirchberg.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Fonds Kirchberg - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Fonds Kirchberg - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 702,
+    "url": "https://igf.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Inspection générale des finances - Intranet",
+    "lang": "FR",
+    "title": "Accessibilité - Inspection générale des finances - Intranet",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 723,
+    "url": "https://mega.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Egalité des genres et de la Diversité - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Egalité des genres et de la Diversité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 739,
+    "url": "https://securite-alimentaire.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Sécurité alimentaire - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Sécurité alimentaire - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 746,
+    "url": "https://statistiques.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Statistiques - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Statistiques - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,3,4,5,6"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 769,
+    "url": "https://lu-alert.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - LU-Alert - Luxembourg",
+    "error": "Waiting for selector `#checkA11YPanel` failed",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 1426,
+    "url": "https://saisiepenale.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Saisie pénale - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Saisie pénale - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 197,
+    "url": "https://healthcareers.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Healthcareers - Luxembourg",
+    "lang": "FR",
+    "title": "Healthcareers - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 238,
+    "url": "https://renow.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Réferentiel de normalisation web - Renow - Luxembourg",
+    "lang": "FR",
+    "title": "Réferentiel de normalisation web - Renow - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,6"
+        }
+      ],
+      "3": [
+        {
+          "code": "02-B\n                     Color red",
+          "message": "Absence de certains attributs sur des SVG (aria-hidden=true) [RAWeb 1.2.4 - Opquast 111]"
+        },
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 330,
+    "url": "https://cna.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Centre national de l’audiovisuel - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Centre national de l'audiovisuel - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "05-F\n                     Color orange",
+          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 782,
+    "url": "https://communales-jepeuxvoter.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Communales - Je peux voter - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Communales - Je peux voter - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 783,
+    "url": "https://europeennes-jepeuxvoter.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "Européennes - Je peux voter - Luxembourg",
+    "lang": "FR",
+    "title": "Européennes - Je peux voter - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "06-P\n                     Color orange",
+          "message": "Si l’intégralité des items ne contiennent qu’un seul élément textuel celui-ci sera dans une balise paragraphe 'p'"
+        },
+        {
+          "code": "06-P\n                     Color orange",
+          "message": "Les items du grid doivent avoir un contenu"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 466,
+    "url": "https://luxembourg.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-A\n                     Color orange",
+          "message": "Présence d'éléments textuels insuffisamment contrasté"
+        },
+        {
+          "code": "05-F\n                     Color orange",
+          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 488,
+    "url": "https://renow.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Réferentiel de normalisation web - Renow - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Réferentiel de normalisation web - Renow - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,6"
+        }
+      ],
+      "3": [
+        {
+          "code": "06-H\n                     Color red",
+          "message": "Chaque cadre doit avoir un titre  [RAWeb 2.1.1]"
+        },
+        {
+          "code": "10-C\n                     Color red",
+          "message": "Présence d'attributs HTML obsoletes"
+        },
+        {
+          "code": "10-D\n                     Color red",
+          "message": "Présence d'attributs HTML servant à la présentation de l'information [RAWeb 10.1.2]"
+        },
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 787,
+    "url": "https://crf.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - CRF - Cellule de renseignement financier - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - CRF - Cellule de renseignement financier - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 789,
+    "url": "https://myasbl.public.lu/fr.html",
+    "iso": "FR",
+    "originalTitle": "myASBL - Luxembourg",
+    "lang": "FR",
+    "title": "myASBL - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 591,
+    "url": "https://cpfec.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Caisse de prévoyance des fonctionnaires et employés communaux - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Caisse de prévoyance des fonctionnaires et employés communaux - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 708,
+    "url": "https://inra.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - INRA - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - INRA - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 737,
+    "url": "https://renow.public.lu/fr/support/declaration-accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Réferentiel de normalisation web - Renow - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Réferentiel de normalisation web - Renow - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,6"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 262,
+    "url": "https://agriculture.public.lu/de/support/kontakt.html",
+    "iso": "DE",
+    "originalTitle": "Kontakt - Landwirtschaftsportal - Luxembourg",
+    "lang": "DE",
+    "title": "Kontakt - Landwirtschaftsportal - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1309,
+    "url": "https://simpa.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Le Service National d’Information et de Médiation pour les Personnes Âgées - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Le Service National d’Information et de Médiation pour les Personnes Âgées - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1414,
+    "url": "https://mnhn.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Musée national d’histoire naturelle - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Musée national d'histoire naturelle - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-O\n                     Color orange",
+          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 1423,
+    "url": "https://productivite.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Conseil national de la productivité - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Conseil national de la productivité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 775,
+    "url": "https://accessibilite-produits-services.public.lu/fr/support/nous-contacter.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Accessibilité des produits et services - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Accessibilité des produits et services - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 328,
+    "url": "https://cmfec.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - CMFEC - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - CMFEC - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 712,
+    "url": "https://logement.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Logement.lu - Ministère du Logement - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Logement.lu - Ministère du Logement - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 725,
+    "url": "https://mengstudien.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - MengStudien.lu - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - MengStudien.lu - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 317,
+    "url": "https://aop.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - AOP - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - AOP - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 349,
+    "url": "https://economie-sociale-solidaire.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Portail de l’économie sociale et solidaire – Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Portail de l'économie sociale et solidaire – Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 362,
+    "url": "https://gimb.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Gesond iessen - Méi bewegen - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Gesond iessen - Méi bewegen - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,7"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 457,
+    "url": "https://infosenior.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Infosenior - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Infosenior - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 479,
+    "url": "https://interoperabilite.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Portail de l’interopérabilité - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Portail de l'interopérabilité - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 495,
+    "url": "https://solvit.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - SOLVIT - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - SOLVIT - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 499,
+    "url": "https://transports.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Transports.lu - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Transports.lu - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-A\n                     Color orange",
+          "message": "Présence de balises vides [RAWeb 8.9.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°2,3,4,5,6,7,8"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 501,
+    "url": "https://tresorerie.public.lu/fr/support/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Trésorerie de l’Etat - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Trésorerie de l'Etat - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 575,
+    "url": "https://cepas.public.lu/fr/espace-public/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - CEPAS - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - CEPAS - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 573,
+    "url": "https://ccss.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - CCSS (Centre commun de la sécurité sociale) - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - CCSS (Centre commun de la sécurité sociale) - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 594,
+    "url": "https://dcf.extranet.etat.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Direction du contrôle financier - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Direction du contrôle financier - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 607,
+    "url": "https://fdc.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Fonds de compensation commun au régime général de pension",
+    "lang": "FR",
+    "title": "Accessibilité - Fonds de compensation commun au régime général de pension",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 699,
+    "url": "https://govtechlab.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Govtech Lab - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Govtech Lab - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "06-J\n                     Color orange",
+          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+        },
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-A\n                     Color red",
+          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+        }
+      ]
+    }
+  },
+  {
+    "id": 753,
+    "url": "https://zesummendigital.public.lu/fr/support/accessibilite.html",
+    "iso": "FR",
+    "originalTitle": "Accessibilité - Zesummendigital - Luxembourg",
+    "lang": "FR",
+    "title": "Accessibilité - Zesummendigital - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 319,
+    "url": "https://bnl.public.lu/fr/support/aide-contact/contact.html",
+    "iso": "FR",
+    "originalTitle": "Contact - Bibliothèque nationale (BnL) - Luxembourg",
+    "lang": "FR",
+    "title": "Contact - Bibliothèque nationale (BnL) - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "05-F\n                     Color orange",
+          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+        },
+        {
+          "code": "07-F\n                     Color orange",
+          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+        }
+      ],
+      "3": []
+    }
+  },
+  {
+    "id": 326,
+    "url": "https://cepas.public.lu/fr/espace-public/support/contact/formulaire-de-contact.html",
+    "iso": "FR",
+    "originalTitle": "Formulaire de contact - CEPAS - Luxembourg",
+    "lang": "FR",
+    "title": "Formulaire de contact - CEPAS - Luxembourg",
+    "criticity": {
+      "1": [],
+      "2": [
+        {
+          "code": "01-F\n                     Color orange",
+          "message": "Absence de déclaration de couleurs sur la balise body"
+        },
+        {
+          "code": "05-F\n                     Color orange",
+          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+        }
+      ],
+      "3": [
+        {
+          "code": "07-G\n                     Color red",
+          "message": "Une des pages enfant d'un menu actif doit avoir un attribut aria_current='page'"
+        }
+      ]
+    }
+  },
+  {
+    "id": 1432,
+    "url": "https://cyberfortress.public.lu/en/support/accessibility.html",
+    "iso": "EN",
+    "originalTitle": "Accessibility - Cyber Fortress - Luxembourg",
+    "error": "Waiting for selector `#checkA11YPanel` failed",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 1430,
+    "url": "https://cyberfortress.public.lu/en.html",
+    "iso": "EN",
+    "originalTitle": "Cyber Fortress - Luxembourg",
+    "error": "Waiting for selector `#checkA11YPanel` failed",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  {
+    "id": 1431,
+    "url": "https://cyberfortress.public.lu/en/support/contact.html",
+    "iso": "EN",
+    "originalTitle": "Contact - Cyber Fortress - Luxembourg",
+    "error": "Waiting for selector `#checkA11YPanel` failed",
+    "criticity": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  }
+]
