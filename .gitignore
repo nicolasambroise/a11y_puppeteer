@@ -1,3 +1,5 @@
 /node_modules
 /prodV3MainData.json
 /reports/
+/.idea
+/results.json

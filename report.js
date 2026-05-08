@@ -1,6 +1,6 @@
 // ------------------------------------------------------
-//  SCRIPT DE RAPPORT GLOBAL POUR L'AUDIT A11Y
-//  Avec date + tendance d'évolution
+//  REPORT.JS — VERSION COMPLÈTE AVEC TENDANCES PAR PAGE
+//  ET PAR PROBLÈME + NETTOYAGE + FUSION + INDEX.JSON
 // ------------------------------------------------------
 
 const fs = require('fs');
@@ -11,11 +11,27 @@ const path = require('path');
 // ------------------------------------------------------
 const INPUT_FILE = 'results.json';
 const REPORTS_DIR = './reports';
-const TOP_PAGES = 20;
+const TOP_PAGES = 50;
 const TOP_PROBLEMS = 50;
 
 // ------------------------------------------------------
-// CRÉATION DU DOSSIER DES RAPPORTS SI NÉCESSAIRE
+// UTILITAIRES
+// ------------------------------------------------------
+function normalizeProblemMessage(message) {
+  const prefix = "Absence de bouton pour déplier le sous-menu pour l'élément de menu";
+  if (message.startsWith(prefix)) return prefix;
+  return message;
+}
+
+function cleanCode(code) {
+  if (!code) return null;
+  const forbidden = ["Color Orange", "Color Yellow", "Color Red"];
+  if (forbidden.includes(code)) return null;
+  return code;
+}
+
+// ------------------------------------------------------
+// CRÉATION DU DOSSIER DES RAPPORTS
 // ------------------------------------------------------
 if (!fs.existsSync(REPORTS_DIR)) {
   fs.mkdirSync(REPORTS_DIR);
@@ -25,8 +41,8 @@ if (!fs.existsSync(REPORTS_DIR)) {
 // GÉNÉRATION DU NOM DE FICHIER DATÉ
 // ------------------------------------------------------
 const now = new Date();
-const date = now.toISOString().split('T')[0]; // YYYY-MM-DD
-const time = now.toTimeString().split(' ')[0].replace(/:/g, '-'); // HH-MM-SS
+const date = now.toISOString().split('T')[0];
+const time = now.toTimeString().split(' ')[0].replace(/:/g, '-');
 
 const OUTPUT_FILE = path.join(REPORTS_DIR, `report-${date}-${time}.json`);
 
@@ -35,15 +51,14 @@ const OUTPUT_FILE = path.join(REPORTS_DIR, `report-${date}-${time}.json`);
 // ------------------------------------------------------
 const results = JSON.parse(fs.readFileSync(INPUT_FILE, 'utf8'));
 
-console.log(`➡️  Analyse de ${results.length} pages\n`);
+console.log(`➡️ Analyse de ${results.length} pages`);
 
 // ------------------------------------------------------
 // 1. TOTAL PAR CRITICITÉ
 // ------------------------------------------------------
-const totals = { 1: 0, 2: 0, 3: 0 };
+const totals = { 2: 0, 3: 0 };
 
 results.forEach(r => {
-  totals[1] += r.criticity[1].length;
   totals[2] += r.criticity[2].length;
   totals[3] += r.criticity[3].length;
 });
@@ -58,33 +73,34 @@ function topPagesForCriticity(level) {
       url: r.url,
       iso: r.iso,
       title: r.originalTitle,
-      count: r.criticity[level].length
+      count: r.criticity[level].length,
+      criticity: r.criticity
     }))
     .sort((a, b) => b.count - a.count)
     .slice(0, TOP_PAGES);
 }
 
 const topPages = {
-  criticity1: topPagesForCriticity(1),
   criticity2: topPagesForCriticity(2),
   criticity3: topPagesForCriticity(3)
 };
 
 // ------------------------------------------------------
-// 3. CLASSEMENT DES PROBLÈMES LES PLUS FRÉQUENTS
+// 3. TOP PROBLÈMES (fusion + nettoyage)
 // ------------------------------------------------------
 const problemCounter = {};
 
 results.forEach(r => {
-  [1, 2, 3].forEach(level => {
+  [2, 3].forEach(level => {
     r.criticity[level].forEach(p => {
       const normalizedMessage = normalizeProblemMessage(p.message);
-	  const normalizedCode = cleanCode(p.code);
-	  const key = `${normalizedCode}::${normalizedMessage}`;
+      const cleanedCode = cleanCode(p.code);
+
+      const key = `${cleanedCode}::${normalizedMessage}`;
 
       if (!problemCounter[key]) {
         problemCounter[key] = {
-          code: normalizedCode,
+          code: cleanedCode,
           message: normalizedMessage,
           criticity: level,
           count: 0
@@ -99,23 +115,6 @@ results.forEach(r => {
 const topProblems = Object.values(problemCounter)
   .sort((a, b) => b.count - a.count)
   .slice(0, TOP_PROBLEMS);
-  
-function normalizeProblemMessage(message) {
-  const prefix = "Absence de bouton pour déplier le sous-menu";
-  if (message.startsWith(prefix)) {
-    return prefix; // on regroupe toutes les variantes
-  }
-  return message;
-}
-
-function cleanCode(code) {
-  if (!code) return null;
-  const forbidden = ["Color Orange", "Color Yellow", "Color Red", "Color Gray"];
-  if (forbidden.includes(code)) {
-    return null; // on supprime complètement
-  }
-  return code;
-}
 
 // ------------------------------------------------------
 // 4. CHARGER LE RAPPORT PRÉCÉDENT
@@ -123,7 +122,7 @@ function cleanCode(code) {
 function getPreviousReport() {
   const files = fs.readdirSync(REPORTS_DIR)
     .filter(f => f.startsWith('report-') && f.endsWith('.json'))
-    .sort(); // tri chronologique
+    .sort();
 
   if (files.length < 1) return null;
 
@@ -134,49 +133,100 @@ function getPreviousReport() {
 const previousReport = getPreviousReport();
 
 // ------------------------------------------------------
-// 5. CALCUL DE LA TENDANCE
+// 5. TENDANCE GLOBALE
 // ------------------------------------------------------
 function computeTrend(current, previous) {
   const trend = {};
-
-  [1, 2, 3].forEach(level => {
+  [2, 3].forEach(level => {
     const diff = current[level] - previous[level];
+    trend[level] = { previous: previous[level], current: current[level], diff };
+  });
+  return trend;
+}
 
-    trend[level] = {
-      previous: previous[level],
-      current: current[level],
-      diff,
-      direction:
-        diff > 0 ? '↑ augmentation' :
-        diff < 0 ? '↓ diminution' :
-        '= stable'
+let trend = null;
+if (previousReport?.totals) {
+  trend = computeTrend(totals, previousReport.totals);
+}
+
+// ------------------------------------------------------
+// 6. TENDANCE PAR PAGE (criticity 2 & 3)
+// ------------------------------------------------------
+function computePageTrend(currentResults, previousResults) {
+  const trend = {};
+
+  currentResults.forEach(page => {
+    const prev = previousResults.find(p => p.id === page.id);
+    if (!prev) return;
+
+    trend[page.id] = {
+      criticity2: page.criticity[2].length - prev.criticity[2].length,
+      criticity3: page.criticity[3].length - prev.criticity[3].length
     };
   });
 
   return trend;
 }
 
-let trend = null;
-
-if (previousReport && previousReport.totals) {
-  trend = computeTrend(totals, previousReport.totals);
+let pageTrend = null;
+if (previousReport?.results) {
+  pageTrend = computePageTrend(results, previousReport.results);
 }
 
 // ------------------------------------------------------
-// 6. STRUCTURE DU RAPPORT FINAL
+// 7. TENDANCE PAR PROBLÈME
+// ------------------------------------------------------
+function computeProblemTrend(currentProblems, previousProblems) {
+  const trend = {};
+
+  currentProblems.forEach(p => {
+    const prev = previousProblems?.find(
+      x => x.code === p.code && x.message === p.message
+    );
+
+    trend[`${p.code}::${p.message}`] = prev
+      ? p.count - prev.count
+      : 0;
+  });
+
+  return trend;
+}
+
+let problemTrend = null;
+if (previousReport?.topProblems) {
+  problemTrend = computeProblemTrend(topProblems, previousReport.topProblems);
+}
+
+// ------------------------------------------------------
+// 8. STRUCTURE DU RAPPORT FINAL
 // ------------------------------------------------------
 const report = {
   generatedAt: `${date} ${time}`,
   totals,
   topPages,
   topProblems,
-  trend
+  trend,
+  pageTrend,
+  problemTrend,
+  results
 };
 
 // ------------------------------------------------------
-// 7. SAUVEGARDE
+// 9. SAUVEGARDE DU RAPPORT
 // ------------------------------------------------------
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(report, null, 2));
+console.log(`✅ Rapport généré : ${OUTPUT_FILE}`);
 
-console.log(`✅ Rapport généré`);
-console.log(`📁 Fichier : ${OUTPUT_FILE}`);
+// ------------------------------------------------------
+// 10. GÉNÉRATION DE index.json POUR LE DASHBOARD
+// ------------------------------------------------------
+const reportFiles = fs.readdirSync(REPORTS_DIR)
+  .filter(f => f.startsWith('report-') && f.endsWith('.json'))
+  .sort();
+
+fs.writeFileSync(
+  path.join(REPORTS_DIR, 'index.json'),
+  JSON.stringify(reportFiles, null, 2)
+);
+
+console.log(`📁 index.json mis à jour`);

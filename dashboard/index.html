@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Dashboard Audit A11Y</title>
+<title>Dashboard Audit A11Y Renowify</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Chart.js -->
@@ -70,26 +70,26 @@
     text-align: left;
   }
 
-  .trend-up { color: #4CAF50; font-weight: bold; }
-  .trend-down { color: #F44336; font-weight: bold; }
+  .trend-up {  color: #F44336; font-weight: bold; }
+  .trend-down { color: #4CAF50; font-weight: bold; }
   .trend-equal { color: #999; font-weight: bold; }
 </style>
 </head>
 
 <body>
 
-<h1>Dashboard Audit A11Y</h1>
+<h1>Dashboard Audit A11Y Renowify</h1>
 
-<div id="summary" class="grid grid-3"></div>
+<div id="summary" class="grid grid-2"></div>
 
 <h2>Évolution historique</h2>
 <canvas id="chartEvolution" height="100"></canvas>
 
 <h2>Top pages par criticité</h2>
-<div id="topPages" class="grid grid-3"></div>
+<div id="topPages" class="grid grid-2"></div>
 
 <h2>Problèmes les plus fréquents par criticité</h2>
-<div id="topProblemsContainer" class="grid grid-3"></div>
+<div id="topProblemsContainer" class="grid grid-2"</div>
 
 <script>
 async function loadReports() {
@@ -118,81 +118,53 @@ function trendIcon(diff) {
 
 function renderSummary(latest) {
   const container = document.getElementById('summary');
+  
+    function trendColor(diff) {
+		if (diff > 0) return `<span style="color:#F44336;">↑ (+${diff})</span>`;
+		if (diff < 0) return `<span style="color:#4CAF50;">↓ (${diff})</span>`;
+		return `<span style="color:#999;">= (0)</span>`;
+	  }
 
   container.innerHTML = `
-    <div class="card">
-      <div class="criticity-box yellow">🟡 Criticité 1</div>
-      <p>Total : <strong>${latest.totals[1]}</strong></p>
-      ${latest.trend ? `Tendance : ${trendIcon(latest.trend[1].diff)} (${latest.trend[1].diff})` : ''}
-    </div>
 
     <div class="card">
-      <div class="criticity-box orange">🟠 Criticité 2</div>
+      <h3 class="criticity-box orange">🟠 Criticité 2</h3>
       <p>Total : <strong>${latest.totals[2]}</strong></p>
-      ${latest.trend ? `Tendance : ${trendIcon(latest.trend[2].diff)} (${latest.trend[2].diff})` : ''}
+      ${latest.trend ? `Tendance : ${trendColor(latest.trend[2].diff)}` : ''}
     </div>
 
     <div class="card">
-      <div class="criticity-box red">🔴 Criticité 3</div>
+      <h3 class="criticity-box red">🔴 Criticité 3</h3>
       <p>Total : <strong>${latest.totals[3]}</strong></p>
-      ${latest.trend ? `Tendance : ${trendIcon(latest.trend[3].diff)} (${latest.trend[3].diff})` : ''}
+      ${latest.trend ? `Tendance : ${trendColor(latest.trend[3].diff)}` : ''}
     </div>
   `;
 }
 
-function renderTopPages(latest) {
+function renderTopPages(latest, previous) {
   const container = document.getElementById('topPages');
 
-  function tableFor(list) {
-    return `
-      <table>
-        <tr><th>Page</th><th>Nb</th></tr>
-        ${list.map(p => `
-          <tr>
-            <td>${p.title}<br><small>${p.url}</small></td>
-            <td><strong>${p.count}</strong></td>
-          </tr>
-        `).join('')}
-      </table>
-    `;
+  function trendColor(diff) {
+    if (diff > 0) return `<span style="color:#F44336;">↑ (+${diff})</span>`;
+    if (diff < 0) return `<span style="color:#4CAF50;">↓ (${diff})</span>`;
+    return `<span style="color:#999;">= (0)</span>`;
   }
 
-  container.innerHTML = `
-    <div class="card">
-      <h3>Criticité 1</h3>
-      ${tableFor(latest.topPages.criticity1)}
-    </div>
-
-    <div class="card">
-      <h3>Criticité 2</h3>
-      ${tableFor(latest.topPages.criticity2)}
-    </div>
-
-    <div class="card">
-      <h3>Criticité 3</h3>
-      ${tableFor(latest.topPages.criticity3)}
-    </div>
-  `;
-}
-
-function renderTopProblems(latest) {
-  const container = document.getElementById('topProblemsContainer');
-
-  function tableFor(list, colorName, colorClass) {
+  function tableFor(list, criticityLevel, colorClass, picto) {
     return `
       <div class="card">
-        <h3 class="${colorClass}">Criticité ${colorName}</h3>
+        <h3 class="criticity-box ${colorClass}">${picto} Criticité ${criticityLevel}</h3>
         <table>
           <tr>
-            <th>Code</th>
-            <th>Message</th>
-            <th>Occurrences</th>
+            <th>Page</th>
+            <th>Nb</th>
+            <th>Tendance</th>
           </tr>
-          ${list.map(p => `
+          ${list.slice(0, 10).map(p => `
             <tr>
-              <td>${p.code}</td>
-              <td>${p.message}</td>
+              <td>${p.title}<br><small>${p.url}</small></td>
               <td><strong>${p.count}</strong></td>
+              <td>${trendColor(latest.pageTrend?.[p.id]?.[`criticity${criticityLevel}`] ?? 0)}</td>
             </tr>
           `).join('')}
         </table>
@@ -200,21 +172,64 @@ function renderTopProblems(latest) {
     `;
   }
 
-  const c1 = latest.topProblems.filter(p => p.criticity === 1);
+  container.innerHTML = `
+    ${tableFor(latest.topPages.criticity2, 2, "orange", "🟠")}
+    ${tableFor(latest.topPages.criticity3, 3, "red", "🔴")}
+  `;
+}
+
+function renderTopProblems(latest, previous) {
+  const container = document.getElementById('topProblemsContainer');
+
+  function trendColor(diff) {
+    if (diff > 0) return `<span style="color:#F44336;">↑ (+${diff})</span>`;
+    if (diff < 0) return `<span style="color:#4CAF50;">↓ (${diff})</span>`;
+    return `<span style="color:#999;">= (0)</span>`;
+  }
+
+  function tableFor(list, criticityLevel, colorClass, picto) {
+    return `
+      <div class="card">
+        <h3 class="criticity-box ${colorClass}">${picto} Criticité ${criticityLevel}</h3>
+        <table>
+          <tr>
+            <th>Code</th>
+            <th>Message</th>
+            <th>Occurrences</th>
+            <th>Tendance</th>
+          </tr>
+          ${list.slice(0, 10).map(p => {
+            const prev = previous?.topProblems?.find(x => x.code === p.code && x.message === p.message);
+            const diff = prev ? p.count - prev.count : 0;
+
+            return `
+              <tr>
+                <td>${p.code || ""}</td>
+                <td>${p.message}</td>
+                <td><strong>${p.count}</strong></td>
+                <td>${trendColor(diff)}</td>
+              </tr>
+            `;
+          }).join('')}
+        </table>
+      </div>
+    `;
+  }
+
   const c2 = latest.topProblems.filter(p => p.criticity === 2);
   const c3 = latest.topProblems.filter(p => p.criticity === 3);
 
   container.innerHTML = `
-    ${tableFor(c3, "3 (rouge)", "red")}
-    ${tableFor(c2, "2 (orange)", "orange")}
-    ${tableFor(c1, "1 (jaune)", "yellow")}
+    ${tableFor(c2, 2, "orange", "🟠")}
+    ${tableFor(c3, 3, "red", "🔴")}
   `;
 }
 
 
+
 function renderEvolution(reports) {
   const labels = reports.map(r => r.generatedAt);
-  const c1 = reports.map(r => r.totals[1]);
+  //const c1 = reports.map(r => r.totals[1]);
   const c2 = reports.map(r => r.totals[2]);
   const c3 = reports.map(r => r.totals[3]);
 
@@ -223,7 +238,6 @@ function renderEvolution(reports) {
     data: {
       labels,
       datasets: [
-        { label: 'Criticité 1', data: c1, borderColor: '#FFC107', tension: .2 },
         { label: 'Criticité 2', data: c2, borderColor: '#FF9800', tension: .2 },
         { label: 'Criticité 3', data: c3, borderColor: '#F44336', tension: .2 }
       ]
@@ -236,8 +250,8 @@ function renderEvolution(reports) {
   const latest = reports[reports.length - 1];
 
   renderSummary(latest);
-  renderTopPages(latest);
-  renderTopProblems(latest);
+  renderTopPages(latest, reports[reports.length - 2]);
+  renderTopProblems(latest, reports[reports.length - 2]);
   renderEvolution(reports);
 })();
 </script>

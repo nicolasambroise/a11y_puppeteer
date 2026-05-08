@@ -30,6 +30,7 @@ Ce projet permet d’auditer automatiquement plusieurs milliers de pages web en 
 
 ## 📁 Structure du projet
 
+```bash
 project/
 │
 ├── crawler.js
@@ -43,7 +44,7 @@ project/
 │
 └── dashboard/
 	  └── index.html
-
+```
 
 
 ---
@@ -52,12 +53,13 @@ project/
 
 ```bash
 npm install
-npm install puppeteer p-limit```
-
+npm install puppeteer p-limit
+```
 
 🔍 Lancer le crawler
-bash
+```bash
 node crawler.js
+```
 Ce script :
 - lit pages.json
 - ouvre chaque page
@@ -67,42 +69,19 @@ Ce script :
 
 📊 Générer un rapport daté
 ```bash
-node report.js```
+node report.js
+```
 
 Le rapport est enregistré dans :
 ```Code
-/reports/report-YYYY-MM-DD-HH-MM-SS.json```
+/reports/report-YYYY-MM-DD-HH-MM-SS.json
+```
 📈 Afficher le dashboard
 Le dashboard se trouve dans :
 
 ```Code
-dashboard/index.html```
-Pour des raisons de sécurité, il doit être ouvert via un serveur local.
-
-Option 1 — Node.js
-```bash
-npx http-server .```
-
-Puis ouvrir :
-
-```Code
-http://localhost:8080/dashboard/```
-
-Option 2 — Python
-```bash
-python3 -m http.server```
-
-Puis ouvrir :
-
-```Code
-http://localhost:8000/dashboard/```
-
----
-
-🧩 Personnalisation
-- Modifier TOP_PAGES ou TOP_PROBLEMS dans report.js
-- Modifier les couleurs ou styles dans dashboard/index.html
-- Ajouter des filtres (langue, domaine, criticité)
+dashboard/index.html
+```
 
 ---
 

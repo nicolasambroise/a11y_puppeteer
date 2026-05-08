@@ -13,7 +13,7 @@ const puppeteer = require('puppeteer');
 const INPUT_FILE = 'prodV3MainData.json';
 const OUTPUT_FILE = 'results.json';
 const CONCURRENCY = 5; // nombre de pages en parallèle
-const TIMEOUT = 25000; // timeout navigation
+const TIMEOUT = 60000; // timeout navigation
 
 // ---------------------------------------------
 // CHARGEMENT DES DONNÉES
