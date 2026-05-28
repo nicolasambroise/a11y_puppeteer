@@ -116,109 +116,27 @@ const topProblems = Object.values(problemCounter)
   .sort((a, b) => b.count - a.count)
   .slice(0, TOP_PROBLEMS);
 
-// ------------------------------------------------------
-// 4. CHARGER LE RAPPORT PRÉCÉDENT
-// ------------------------------------------------------
-function getPreviousReport() {
-  const files = fs.readdirSync(REPORTS_DIR)
-    .filter(f => f.startsWith('report-') && f.endsWith('.json'))
-    .sort();
-
-  if (files.length < 1) return null;
-
-  const previousFile = files[files.length - 1];
-  return JSON.parse(fs.readFileSync(path.join(REPORTS_DIR, previousFile), 'utf8'));
-}
-
-const previousReport = getPreviousReport();
 
 // ------------------------------------------------------
-// 5. TENDANCE GLOBALE
-// ------------------------------------------------------
-function computeTrend(current, previous) {
-  const trend = {};
-  [2, 3].forEach(level => {
-    const diff = current[level] - previous[level];
-    trend[level] = { previous: previous[level], current: current[level], diff };
-  });
-  return trend;
-}
-
-let trend = null;
-if (previousReport?.totals) {
-  trend = computeTrend(totals, previousReport.totals);
-}
-
-// ------------------------------------------------------
-// 6. TENDANCE PAR PAGE (criticity 2 & 3)
-// ------------------------------------------------------
-function computePageTrend(currentResults, previousResults) {
-  const trend = {};
-
-  currentResults.forEach(page => {
-    const prev = previousResults.find(p => p.id === page.id);
-    if (!prev) return;
-
-    trend[page.id] = {
-      criticity2: page.criticity[2].length - prev.criticity[2].length,
-      criticity3: page.criticity[3].length - prev.criticity[3].length
-    };
-  });
-
-  return trend;
-}
-
-let pageTrend = null;
-if (previousReport?.results) {
-  pageTrend = computePageTrend(results, previousReport.results);
-}
-
-// ------------------------------------------------------
-// 7. TENDANCE PAR PROBLÈME
-// ------------------------------------------------------
-function computeProblemTrend(currentProblems, previousProblems) {
-  const trend = {};
-
-  currentProblems.forEach(p => {
-    const prev = previousProblems?.find(
-      x => x.code === p.code && x.message === p.message
-    );
-
-    trend[`${p.code}::${p.message}`] = prev
-      ? p.count - prev.count
-      : 0;
-  });
-
-  return trend;
-}
-
-let problemTrend = null;
-if (previousReport?.topProblems) {
-  problemTrend = computeProblemTrend(topProblems, previousReport.topProblems);
-}
-
-// ------------------------------------------------------
-// 8. STRUCTURE DU RAPPORT FINAL
+// 4. STRUCTURE DU RAPPORT FINAL
 // ------------------------------------------------------
 const report = {
   generatedAt: `${date} ${time}`,
+  pluginVersion: "2.5.0",
+  totalPages: results.length,   
   totals,
   topPages,
   topProblems,
-  trend,
-  pageTrend,
-  problemTrend,
   results
 };
 
-// ------------------------------------------------------
-// 9. SAUVEGARDE DU RAPPORT
-// ------------------------------------------------------
+
+// SAUVEGARDE DU RAPPORT
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(report, null, 2));
 console.log(`✅ Rapport généré : ${OUTPUT_FILE}`);
 
 // ------------------------------------------------------
-// 10. GÉNÉRATION DE index.json POUR LE DASHBOARD
+// 5. GÉNÉRATION DE index.json POUR LE DASHBOARD
 // ------------------------------------------------------
 const reportFiles = fs.readdirSync(REPORTS_DIR)
   .filter(f => f.startsWith('report-') && f.endsWith('.json'))

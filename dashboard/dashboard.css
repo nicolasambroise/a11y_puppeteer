@@ -1,0 +1,68 @@
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+h3 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    background: white;
+    padding: .5rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.criticity-box {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.2rem;
+}
+
+.yellow { color: #FFC107; }
+.orange { color: #FF9800; }
+.red { color: #F44336; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th, table td {
+    padding: .5rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.trend-up {  color: #F44336; font-weight: bold; }
+.trend-down { color: #4CAF50; font-weight: bold; }
+.trend-equal { color: #999; font-weight: bold; }

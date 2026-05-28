@@ -56,6 +56,13 @@ npm install
 npm install puppeteer p-limit
 ```
 
+S'il y a des problèmes pour installer puppeteer, vous pouvez installer chrome headless manuellement :
+```bash
+set PUPPETEER_SKIP_DOWNLOAD=true
+set NODE_TLS_REJECT_UNAUTHORIZED=0
+npx puppeteer browser install chrome
+```
+
 🔍 Lancer le crawler
 ```bash
 node crawler.js

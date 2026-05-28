@@ -4,21 +4,12 @@ const pluginUrl = 'https://webux.gouv.etat.lu/a11y/a11y_renowify';
 
 function run_renowify_static(debug = false, redac = true, nc = false) {
   /*- -------------------------------------------------------------------------------- */
-  // clean console
-  console.clear();
-  console.log('== Init Plugin Renowify');
-
-  /*- -------------------------------------------------------------------------------- */
   // Add JS
   // - double sécurité pour que ce sript puisse également être appelé par l'extention chrome
   if (!document.body.classList.contains('renowify-script-injected')) {
-    /* Pour le bookmarklet */
-    console.log('== Start Bookmarklet Renowify ==');
-    console.time('Renowify');
-    const style_loaded = loadStyle(pluginUrl);
     const script_loaded = loadScript(pluginUrl);
-
-    Promise.all([style_loaded, script_loaded]).then(function () {
+	  Promise.all([script_loaded]).then(function () {
+		
       // Open Accordion before running check
       beforeCheck();
 
@@ -38,21 +29,19 @@ function run_renowify_static(debug = false, redac = true, nc = false) {
         check_part_13,
         check_part_14,
         check_part_15
-      ];
-      const partPromises = checkPartFunctions.map(partPromiseResolve);
+      ];    
+	 const checksPromises = checkPartFunctions.map(partPromiseResolve);
 
-      Promise.allSettled(partPromises)
-        .then((promisesResults) => logPromisesResult(promisesResults))
-        .then(function () {
-          setTimeout(() => createResultPanel(), 100);
-        })
-        .then(function () {
-          setTimeout(() => activateCheckA11YPanel(), 100);
-        })
-        .then(function () {
-          console.log('== End Plugin Renowify ==');
-          console.timeEnd('Renowify');
-        });
+      async function resolveChecksPromise() {
+        // Executer les tests
+        const promisesResults = await Promise.allSettled(checksPromises);
+        // Affiche le résultat de la promise (fulfulled/rejected) dans la console
+        logPromisesResult(promisesResults);
+        createResultPanel();
+        activateCheckA11YPanel();
+      }
+
+      resolveChecksPromise();
     });
   }
 }
@@ -75,22 +64,6 @@ function loadScript(pluginUrl) {
   });
 }
 
-// fonction pour charger le style
-function loadStyle(pluginUrl) {
-  return new Promise(function (resolve, reject) {
-    let style = document.createElement('link');
-    style.id = 'injected-css';
-    style.rel = 'stylesheet';
-    style.href = pluginUrl + '/assets/index.css?v=' + Date.now();
-
-    style.onload = () => resolve(style);
-    style.onerror = () => reject(new Error(`Style load error`));
-
-    if (document.getElementById('renowify-style-injected') === null)
-      document.head.append(style);
-  });
-}
-
 function partPromiseResolve(check_part_function) {
   return new Promise((resolve) => {
     check_part_function();
@@ -101,7 +74,7 @@ function partPromiseResolve(check_part_function) {
 function logPromisesResult(promisesResults) {
   promisesResults.forEach((result, index) => {
     const partIndex = `0${index + 1}`.slice(-2);
-    console.log(`- Part ${partIndex} : ${result.status}`);
+    //console.log(`- Part ${partIndex} : ${result.status}`);
     if (result.status !== 'fulfilled') {
       alert(`- Part ${partIndex} : ${result.status}`);
     }

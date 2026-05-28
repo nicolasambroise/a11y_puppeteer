@@ -10,12 +10,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-O\n                     Color orange",
-          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
-        },
-        {
-          "code": "06-O\n                     Color orange",
-          "message": "Le premier élément informatif dans le DOM de chaque item doit être le titre"
+          "code": "06-O\n                       Color orange",
+          "message": "Titre non placé en premier dans un item focus"
         }
       ],
       "3": []
@@ -32,20 +28,16 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-O\n                       Color orange",
+          "message": "Titre non placé en premier dans un item focus"
         },
         {
-          "code": "06-O\n                     Color orange",
-          "message": "Le premier élément informatif dans le DOM de chaque item doit être le titre"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         },
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
-        },
-        {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "11-C\n                       Color orange",
+          "message": "Texte dans une langue étrangère sans attribut lang"
         }
       ],
       "3": []
@@ -60,12 +52,7 @@
     "title": "AOP - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -80,12 +67,12 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -102,14 +89,14 @@
       "1": [],
       "2": [
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "03-E\n                     Color red",
-          "message": "Présence de liens dont l'attribut title ne reprend pas le contenu textuel [RAWeb 6.1.5]"
+          "code": "03-E\n                       Color red",
+          "message": "Title ne reprenant pas le texte du lien [RAWeb 6.1.5]"
         }
       ]
     }
@@ -123,12 +110,7 @@
     "title": "Commission Consultative des Droits de l'Homme - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -156,12 +138,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "11-C\n                       Color orange",
+          "message": "Texte dans une langue étrangère sans attribut lang"
         }
       ],
       "3": []
@@ -178,16 +156,12 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-O\n                       Color orange",
+          "message": "Titre non placé en premier dans un item focus"
         },
         {
-          "code": "06-O\n                     Color orange",
-          "message": "Le premier élément informatif dans le DOM de chaque item doit être le titre"
-        },
-        {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "11-C\n                       Color orange",
+          "message": "Texte dans une langue étrangère sans attribut lang"
         }
       ],
       "3": []
@@ -204,18 +178,18 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": [
         {
-          "code": "10-A\n                     Color red",
-          "message": "Présence de balise HTML obsolètes ou servant à la présentation de l'information [RAWeb 10.1.1]"
+          "code": "10-A\n                       Color red",
+          "message": "Balises HTML obsolètes ou décoratives [RAWeb 10.1.1]"
         },
         {
-          "code": "06-A\n                     Color red",
-          "message": "Vérifier qu'il n'y a pas de role sur les container de liste [RAWeb 9.3.1]"
+          "code": "06-A\n                       Color red",
+          "message": "Rôle ARIA inutile sur un conteneur de liste [RAWeb 9.3.1]"
         }
       ]
     }
@@ -231,18 +205,14 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -258,12 +228,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -278,16 +244,11 @@
     "title": "Protection internationale - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -303,16 +264,16 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         },
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         },
         {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "11-C\n                       Color orange",
+          "message": "Texte dans une langue étrangère sans attribut lang"
         }
       ],
       "3": []
@@ -329,18 +290,14 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -356,8 +313,8 @@
       "1": [],
       "2": [
         {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -374,12 +331,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -396,30 +349,22 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
+          "code": "06-M\n                       Color orange",
+          "message": "Infos de contact non structurées en dl [RAWeb 9.3.3]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "06-M\n                     Color orange",
-          "message": "Présence d'une liste d'info de contact dans une adresse Geoportail n'utilisant pas une structure de liste 'dl' [RAWeb 9.3.3]"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "06-M\n                     Color red",
-          "message": "Présence d'une carte Geoportail sans adresse visible"
+          "code": "06-M\n                       Color red",
+          "message": "Adresse Geoportail non visible"
         },
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -435,20 +380,16 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
+          "code": "05-A\n                       Color orange",
+          "message": "Balise vide [RAWeb 8.9.1]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         },
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,7"
-        },
-        {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "11-C\n                       Color orange",
+          "message": "Texte dans une langue étrangère sans attribut lang"
         }
       ],
       "3": []
@@ -465,12 +406,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -485,8 +422,18 @@
     "title": "Luxembourg",
     "criticity": {
       "1": [],
-      "2": [],
-      "3": []
+      "2": [
+        {
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
+        }
+      ],
+      "3": [
+        {
+          "code": "09-D\n                       Color red",
+          "message": "Absence d’un second système de navigation [RAWeb 12.1.1]"
+        }
+      ]
     }
   },
   {
@@ -500,8 +447,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -518,16 +465,12 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-O\n                       Color orange",
+          "message": "Item unique du focus dans une liste"
         },
         {
-          "code": "06-O\n                     Color orange",
-          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -542,12 +485,7 @@
     "title": "Infosenior - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -560,12 +498,7 @@
     "title": "Infocrise - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -580,8 +513,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -596,12 +529,7 @@
     "title": "KEP - Kulturentwécklungsplang 2018-2028 - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -616,24 +544,16 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         },
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "05-F\n                     Color orange",
-          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
-        },
-        {
-          "code": "06-O\n                     Color orange",
-          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+          "code": "06-O\n                       Color orange",
+          "message": "Item unique du focus dans une liste"
         }
       ],
       "3": []
@@ -650,18 +570,18 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         },
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -677,12 +597,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -699,12 +615,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -721,16 +633,12 @@
       "1": [],
       "2": [
         {
-          "code": "05-B\n                     Color orange",
-          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
+          "code": "05-B\n                       Color orange",
+          "message": "Balise vide ou quasi vide [RAWeb 8.9.1]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "05-F\n                     Color orange",
-          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         }
       ],
       "3": []
@@ -745,12 +653,7 @@
     "title": "Egalité des genres et de la Diversité - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -765,16 +668,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "06-O\n                     Color orange",
-          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
-        },
-        {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "06-O\n                       Color orange",
+          "message": "Item unique du focus dans une liste"
         }
       ],
       "3": []
@@ -789,12 +684,7 @@
     "title": "Ondes - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -809,8 +699,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -838,7 +728,12 @@
     "title": "Portail Santé - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [],
+      "2": [
+        {
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
+        }
+      ],
       "3": []
     }
   },
@@ -853,12 +748,8 @@
       "1": [],
       "2": [
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
-        },
-        {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -873,12 +764,7 @@
     "title": "Seveso - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -893,12 +779,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -913,12 +795,7 @@
     "title": "SOLVIT - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -933,14 +810,14 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -956,16 +833,12 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         },
         {
-          "code": "05-F\n                     Color orange",
-          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,3,4,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -982,16 +855,12 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1008,16 +877,12 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "06-O\n                     Color orange",
-          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+          "code": "06-O\n                       Color orange",
+          "message": "Item unique du focus dans une liste"
         }
       ],
       "3": []
@@ -1034,16 +899,16 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         },
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1060,12 +925,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1082,26 +943,18 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         },
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "06-M\n                     Color orange",
-          "message": "Présence d'une liste d'info de contact dans une adresse Geoportail n'utilisant pas une structure de liste 'dl' [RAWeb 9.3.3]"
+          "code": "06-M\n                       Color orange",
+          "message": "Infos de contact non structurées en dl [RAWeb 9.3.3]"
         }
       ],
       "3": [
         {
-          "code": "06-M\n                     Color red",
-          "message": "Présence d'une carte Geoportail sans adresse visible"
+          "code": "06-M\n                       Color red",
+          "message": "Adresse Geoportail non visible"
         }
       ]
     }
@@ -1117,8 +970,8 @@
       "1": [],
       "2": [
         {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "11-C\n                       Color orange",
+          "message": "Texte dans une langue étrangère sans attribut lang"
         }
       ],
       "3": []
@@ -1133,12 +986,7 @@
     "title": "Contact - Commission Consultative des Droits de l'Homme - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1164,12 +1012,7 @@
     "title": "Contact - Caisse de Maladie des Fonctionnaires et Employés Publics - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1184,12 +1027,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1206,22 +1045,18 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-P\n                       Color orange",
+          "message": "Item grid avec un seul texte non structuré"
         },
         {
-          "code": "06-P\n                     Color orange",
-          "message": "Si l’intégralité des items ne contiennent qu’un seul élément textuel celui-ci sera dans une balise paragraphe 'p'"
-        },
-        {
-          "code": "06-P\n                     Color orange",
-          "message": "Les items du grid doivent avoir un contenu"
+          "code": "06-P\n                       Color orange",
+          "message": "Item grid sans contenu"
         }
       ],
       "3": [
         {
-          "code": "06-A\n                     Color red",
-          "message": "Vérifier qu'il n'y a pas de role sur les container de liste [RAWeb 9.3.1]"
+          "code": "06-A\n                       Color red",
+          "message": "Rôle ARIA inutile sur un conteneur de liste [RAWeb 9.3.1]"
         }
       ]
     }
@@ -1237,12 +1072,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1257,12 +1088,7 @@
     "title": "Contact - Communales - Je peux voter - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1277,18 +1103,18 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -1304,16 +1130,8 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
-        },
-        {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -1330,16 +1148,8 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1356,12 +1166,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1378,18 +1184,14 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -1405,18 +1207,14 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -1430,12 +1228,7 @@
     "title": "Contact - Européennes - Je peux voter - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1448,12 +1241,7 @@
     "title": "Accessibilité - Européennes - Je peux voter - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1468,12 +1256,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1488,12 +1272,7 @@
     "title": "Contact - Infocrise - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1506,12 +1285,7 @@
     "title": "Contact - INRA - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1524,12 +1298,7 @@
     "title": "Contact - KEP - Kulturentwécklungsplang 2018-2028 - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1544,18 +1313,14 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -1571,12 +1336,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -1593,16 +1354,8 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1619,12 +1372,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1639,12 +1388,7 @@
     "title": "Contact - Egalité des genres et de la Diversité - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1659,8 +1403,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -1675,12 +1419,7 @@
     "title": "Contact - Ondes - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1708,8 +1447,8 @@
       "1": [],
       "2": [
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1726,8 +1465,8 @@
       "1": [],
       "2": [
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1742,12 +1481,7 @@
     "title": "Contact - Seveso - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1762,12 +1496,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1782,16 +1512,11 @@
     "title": "Contact - Portail du sport - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -1807,12 +1532,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,3,4,5,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1827,12 +1548,7 @@
     "title": "Accessibilité - CRF - Cellule de renseignement financier - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1847,12 +1563,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -1869,12 +1581,12 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         },
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1891,12 +1603,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1913,12 +1621,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -1933,12 +1637,7 @@
     "title": "Accessibilité - AOP - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -1953,12 +1652,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -1986,12 +1681,7 @@
     "title": "Accessibilité - Commission Consultative des Droits de l'Homme - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2004,12 +1694,7 @@
     "title": "Accessibilité - Caisse de Maladie des Fonctionnaires et Employés Publics - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2022,12 +1707,7 @@
     "title": "Accessibilité - Centre national de l'audiovisuel - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2042,12 +1722,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2062,16 +1738,11 @@
     "title": "Accessibilité - Protection internationale - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -2087,12 +1758,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2109,12 +1776,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -2129,12 +1792,7 @@
     "title": "Accessibilité - etat.lu - L'annuaire des sites publics luxembourgeois",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2149,12 +1807,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,7"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2170,7 +1824,12 @@
     "criticity": {
       "1": [],
       "2": [],
-      "3": []
+      "3": [
+        {
+          "code": "09-D\n                       Color red",
+          "message": "Absence d’un second système de navigation [RAWeb 12.1.1]"
+        }
+      ]
     }
   },
   {
@@ -2182,12 +1841,7 @@
     "title": "Guichet.lu - Guichet.lu - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2200,12 +1854,7 @@
     "title": "Accessibilité - Healthcareers - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2220,12 +1869,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2240,12 +1885,7 @@
     "title": "Accessibilité - Infocrise - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2258,12 +1898,7 @@
     "title": "Accessibilité - Infosenior - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2276,12 +1911,7 @@
     "title": "Accessibilité - KEP - Kulturentwécklungsplang 2018-2028 - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2296,16 +1926,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
-        },
-        {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2322,12 +1944,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2342,12 +1960,7 @@
     "title": "Accessibilité - Mediareform - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2362,8 +1975,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -2378,12 +1991,7 @@
     "title": "Accessibilité - Portail de l'interopérabilité - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2396,12 +2004,7 @@
     "title": "Accessibilité - Ondes - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2416,8 +2019,8 @@
       "1": [],
       "2": [
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2432,12 +2035,7 @@
     "title": "Accessibilité - Seveso - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2452,12 +2050,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2472,12 +2066,7 @@
     "title": "Accessibilité - SOLVIT - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2490,16 +2079,11 @@
     "title": "Accessibilité - Portail du sport - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -2515,12 +2099,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°2,3,4,5,6,7,8"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2537,12 +2117,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2559,12 +2135,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -2581,8 +2153,8 @@
       "1": [],
       "2": [
         {
-          "code": "05-F\n                     Color orange",
-          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         }
       ],
       "3": []
@@ -2599,8 +2171,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         }
       ],
       "3": []
@@ -2617,8 +2189,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -2635,8 +2207,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -2651,12 +2223,7 @@
     "title": "Conseil national de la justice",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2683,8 +2250,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         }
       ],
       "3": []
@@ -2699,12 +2266,7 @@
     "title": "Contact - Conseil national de la justice",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2717,12 +2279,7 @@
     "title": "Accessibilité - Conseil national de la justice",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2737,26 +2294,18 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
+          "code": "05-A\n                       Color orange",
+          "message": "Balise vide [RAWeb 8.9.1]"
         },
         {
-          "code": "05-B\n                     Color orange",
-          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
-        },
-        {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": [
         {
-          "code": "06-A\n                     Color red",
-          "message": "Vérifier qu'il n'y a pas de role sur les container de liste [RAWeb 9.3.1]"
+          "code": "06-A\n                       Color red",
+          "message": "Rôle ARIA inutile sur un conteneur de liste [RAWeb 9.3.1]"
         }
       ]
     }
@@ -2770,12 +2319,7 @@
     "title": "Accessibilité - 123EASY - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2803,12 +2347,12 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         },
         {
-          "code": "06-O\n                     Color orange",
-          "message": "Le premier élément informatif dans le DOM de chaque item doit être le titre"
+          "code": "06-O\n                       Color orange",
+          "message": "Titre non placé en premier dans un item focus"
         }
       ],
       "3": []
@@ -2838,12 +2382,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2858,12 +2398,7 @@
     "title": "CRF - Cellule de renseignement financier - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2876,12 +2411,7 @@
     "title": "CMFEC - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2896,12 +2426,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -2918,12 +2444,12 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -2940,12 +2466,8 @@
       "1": [],
       "2": [
         {
-          "code": "05-B\n                     Color orange",
-          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "05-B\n                       Color orange",
+          "message": "Balise vide ou quasi vide [RAWeb 8.9.1]"
         }
       ],
       "3": []
@@ -2960,12 +2482,7 @@
     "title": "Accessibilité - Le Service National d’Information et de Médiation pour les Personnes Âgées - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -2980,8 +2497,8 @@
       "1": [],
       "2": [
         {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "11-C\n                       Color orange",
+          "message": "Texte dans une langue étrangère sans attribut lang"
         }
       ],
       "3": []
@@ -2998,11 +2515,16 @@
       "1": [],
       "2": [
         {
-          "code": "05-B\n                     Color orange",
-          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
+          "code": "05-B\n                       Color orange",
+          "message": "Balise vide ou quasi vide [RAWeb 8.9.1]"
         }
       ],
-      "3": []
+      "3": [
+        {
+          "code": "08-A\n                       Color red",
+          "message": "En-têtes sans attribut scope [RAWeb 5.7.1]"
+        }
+      ]
     }
   },
   {
@@ -3027,12 +2549,7 @@
     "title": "Contact - Portail de la navigation fluviale - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3047,23 +2564,24 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
+          "code": "05-B\n                       Color orange",
+          "message": "Balise vide ou quasi vide [RAWeb 8.9.1]"
         },
         {
-          "code": "05-B\n                     Color orange",
-          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
+          "code": "06-O\n                       Color orange",
+          "message": "Item unique du focus dans une liste"
         },
         {
-          "code": "06-O\n                     Color orange",
-          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
-        },
-        {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "11-C\n                       Color orange",
+          "message": "Texte dans une langue étrangère sans attribut lang"
         }
       ],
-      "3": []
+      "3": [
+        {
+          "code": "05-H\n                       Color red",
+          "message": "Multiples sauts de ligne [RAWeb 8.9.1]"
+        }
+      ]
     }
   },
   {
@@ -3129,8 +2647,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -3147,8 +2665,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -3165,14 +2683,14 @@
       "1": [],
       "2": [
         {
-          "code": "05-F\n                     Color orange",
-          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         }
       ],
       "3": [
         {
-          "code": "06-A\n                     Color red",
-          "message": "Vérifier qu'il n'y a pas de role sur les container de liste [RAWeb 9.3.1]"
+          "code": "06-A\n                       Color red",
+          "message": "Rôle ARIA inutile sur un conteneur de liste [RAWeb 9.3.1]"
         }
       ]
     }
@@ -3188,12 +2706,8 @@
       "1": [],
       "2": [
         {
-          "code": "05-F\n                     Color orange",
-          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
-        },
-        {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         }
       ],
       "3": []
@@ -3210,12 +2724,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -3230,12 +2740,7 @@
     "title": "Inspection générale des finances - Intranet",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3263,18 +2768,14 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -3290,18 +2791,14 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -3317,12 +2814,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -3339,12 +2832,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -3361,8 +2850,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -3379,16 +2868,8 @@
       "1": [],
       "2": [
         {
-          "code": "05-B\n                     Color orange",
-          "message": "Présence de balises vides (ou avec un contenu assimilable à vide) [RAWeb 8.9.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "11-C\n                     Color orange",
-          "message": "Forte probabilité de texte en langue étrangère présent sur la page (sans attribut 'lang')"
+          "code": "05-B\n                       Color orange",
+          "message": "Balise vide ou quasi vide [RAWeb 8.9.1]"
         }
       ],
       "3": []
@@ -3405,8 +2886,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-O\n                     Color orange",
-          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+          "code": "06-O\n                       Color orange",
+          "message": "Item unique du focus dans une liste"
         }
       ],
       "3": []
@@ -3423,22 +2904,22 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         },
         {
-          "code": "06-O\n                     Color orange",
-          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+          "code": "06-O\n                       Color orange",
+          "message": "Item unique du focus dans une liste"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -3452,12 +2933,7 @@
     "title": "Portail de l'interopérabilité - Luxembourg - Portail de l'interopérabilité - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3472,16 +2948,12 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-O\n                       Color orange",
+          "message": "Item unique du focus dans une liste"
         },
         {
-          "code": "06-O\n                     Color orange",
-          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°2,3,4,5,6,7,8"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -3496,12 +2968,7 @@
     "title": "Contact - Healthcareers - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3514,12 +2981,7 @@
     "title": "Contact - Mediareform - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3534,8 +2996,8 @@
       "1": [],
       "2": [
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -3550,12 +3012,7 @@
     "title": "Accessibilité - CMFEC - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3570,18 +3027,14 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -3595,12 +3048,7 @@
     "title": "Accessibilité - Inspection générale des finances - Intranet",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3613,12 +3061,7 @@
     "title": "Accessibilité - Egalité des genres et de la Diversité - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3633,8 +3076,8 @@
       "1": [],
       "2": [
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -3651,12 +3094,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,3,4,5,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -3685,8 +3124,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": []
@@ -3703,8 +3142,12 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-O\n                       Color orange",
+          "message": "Titre non placé en premier dans un item focus"
+        },
+        {
+          "code": "11-C\n                       Color orange",
+          "message": "Texte dans une langue étrangère sans attribut lang"
         }
       ],
       "3": []
@@ -3721,22 +3164,18 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "02-B\n                     Color red",
-          "message": "Absence de certains attributs sur des SVG (aria-hidden=true) [RAWeb 1.2.4 - Opquast 111]"
+          "code": "02-B\n                       Color red",
+          "message": "SVG décoratif sans aria-hidden [RAWeb 1.2.4, Opquast 111]"
         },
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -3752,16 +3191,8 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "05-F\n                     Color orange",
-          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         }
       ],
       "3": []
@@ -3776,12 +3207,7 @@
     "title": "Accessibilité - Communales - Je peux voter - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3796,16 +3222,12 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-P\n                       Color orange",
+          "message": "Item grid avec un seul texte non structuré"
         },
         {
-          "code": "06-P\n                     Color orange",
-          "message": "Si l’intégralité des items ne contiennent qu’un seul élément textuel celui-ci sera dans une balise paragraphe 'p'"
-        },
-        {
-          "code": "06-P\n                     Color orange",
-          "message": "Les items du grid doivent avoir un contenu"
+          "code": "06-P\n                       Color orange",
+          "message": "Item grid sans contenu"
         }
       ],
       "3": []
@@ -3822,15 +3244,16 @@
       "1": [],
       "2": [
         {
-          "code": "01-A\n                     Color orange",
-          "message": "Présence d'éléments textuels insuffisamment contrasté"
-        },
-        {
-          "code": "05-F\n                     Color orange",
-          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         }
       ],
-      "3": []
+      "3": [
+        {
+          "code": "09-D\n                       Color red",
+          "message": "Absence d’un second système de navigation [RAWeb 12.1.1]"
+        }
+      ]
     }
   },
   {
@@ -3844,30 +3267,26 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "06-H\n                     Color red",
-          "message": "Chaque cadre doit avoir un titre  [RAWeb 2.1.1]"
+          "code": "06-H\n                       Color red",
+          "message": "Iframe sans titre [RAWeb 2.1.1]"
         },
         {
-          "code": "10-C\n                     Color red",
-          "message": "Présence d'attributs HTML obsoletes"
+          "code": "10-C\n                       Color red",
+          "message": "Attributs HTML obsolètes"
         },
         {
-          "code": "10-D\n                     Color red",
-          "message": "Présence d'attributs HTML servant à la présentation de l'information [RAWeb 10.1.2]"
+          "code": "10-D\n                       Color red",
+          "message": "Attributs HTML utilisés pour la présentation [RAWeb 10.1.2]"
         },
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -3881,12 +3300,7 @@
     "title": "Contact - CRF - Cellule de renseignement financier - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3901,8 +3315,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         }
       ],
       "3": []
@@ -3919,18 +3333,14 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -3944,12 +3354,7 @@
     "title": "Accessibilité - INRA - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -3964,22 +3369,18 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         },
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -3995,12 +3396,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -4015,12 +3412,7 @@
     "title": "Contact - Le Service National d’Information et de Médiation pour les Personnes Âgées - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -4035,8 +3427,8 @@
       "1": [],
       "2": [
         {
-          "code": "06-O\n                     Color orange",
-          "message": "S’il n’y a qu’un seul item dans le focus celui-ci ne doit pas être liste 'ul'"
+          "code": "06-O\n                       Color orange",
+          "message": "Item unique du focus dans une liste"
         }
       ],
       "3": []
@@ -4077,16 +3469,7 @@
     "title": "Contact - CMFEC - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -4101,18 +3484,14 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -4126,12 +3505,7 @@
     "title": "Accessibilité - MengStudien.lu - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -4144,12 +3518,7 @@
     "title": "Contact - AOP - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -4164,12 +3533,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -4186,12 +3551,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,7"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -4206,12 +3567,7 @@
     "title": "Contact - Infosenior - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -4224,12 +3580,7 @@
     "title": "Contact - Portail de l'interopérabilité - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -4242,12 +3593,7 @@
     "title": "Contact - SOLVIT - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -4262,16 +3608,8 @@
       "1": [],
       "2": [
         {
-          "code": "05-A\n                     Color orange",
-          "message": "Présence de balises vides [RAWeb 8.9.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°2,3,4,5,6,7,8"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -4288,12 +3626,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -4308,12 +3642,7 @@
     "title": "Accessibilité - CEPAS - Luxembourg",
     "criticity": {
       "1": [],
-      "2": [
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        }
-      ],
+      "2": [],
       "3": []
     }
   },
@@ -4341,12 +3670,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -4363,12 +3688,8 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -4385,18 +3706,14 @@
       "1": [],
       "2": [
         {
-          "code": "06-J\n                     Color orange",
-          "message": "Présence d'une liste à un seul élément [RAWeb 9.3.1]"
-        },
-        {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "06-J\n                       Color orange",
+          "message": "Liste contenant un seul élément [RAWeb 9.3.1]"
         }
       ],
       "3": [
         {
-          "code": "07-A\n                     Color red",
-          "message": "Présence du bouton d'ouverture du menu en dehors de la balise nav."
+          "code": "07-A\n                       Color red",
+          "message": "Bouton d’ouverture du menu hors de la balise nav"
         }
       ]
     }
@@ -4412,12 +3729,12 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
+          "code": "03-Q\n                       Color orange",
+          "message": "Liens identiques menant à des cibles différentes"
         },
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°3,4"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -4434,12 +3751,12 @@
       "1": [],
       "2": [
         {
-          "code": "05-F\n                     Color orange",
-          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         },
         {
-          "code": "07-F\n                     Color orange",
-          "message": "Absence de bouton pour déplier le sous-menu pour l'élément de menu n°1,2,3,4,5,6,7"
+          "code": "07-F\n                       Color orange",
+          "message": "Bouton de dépliement du sous-menu manquant"
         }
       ],
       "3": []
@@ -4456,18 +3773,14 @@
       "1": [],
       "2": [
         {
-          "code": "01-F\n                     Color orange",
-          "message": "Absence de déclaration de couleurs sur la balise body"
-        },
-        {
-          "code": "05-F\n                     Color orange",
-          "message": "Présence d'Id dupliqué [RAWeb 8.2.1 - Opquast 229]"
+          "code": "05-F\n                       Color orange",
+          "message": "ID dupliqué [RAWeb 8.2.1, Opquast 229]"
         }
       ],
       "3": [
         {
-          "code": "07-G\n                     Color red",
-          "message": "Une des pages enfant d'un menu actif doit avoir un attribut aria_current='page'"
+          "code": "07-G\n                       Color red",
+          "message": "Page enfant active sans aria-current='page'"
         }
       ]
     }

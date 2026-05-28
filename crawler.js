@@ -26,7 +26,6 @@ console.log(`➡️  ${validPages.length} pages à analyser\n`);
 // ---------------------------------------------
 // CHARGEMENT DU SCRIPT D'AUDIT
 // ---------------------------------------------
-//const auditScript = fs.readFileSync('Z:\\a11y\\a11y_renowify\\assets\\index.js', 'utf8');
 const auditScript = fs.readFileSync('./audit.js', 'utf8');
 
 // ---------------------------------------------
@@ -79,6 +78,33 @@ function getExtractor() {
 async function auditPage(browser, pageInfo) {
   const page = await browser.newPage();
 
+  const allowedMsg = ['[FRC Agent] IndexedDB', 'Access to fetch at', 'has been blocked by CORS policy','chat-window-messages'];
+  const allowedErr = ['TypeError: Cannot read properties of'];
+  const allowedStatus = [200,201,206,301,302,303,304]
+  const allowedFailed = ['https://etat.kiss.lu', 'https://eu.frcapi.com/api/v2/captcha']
+
+  page
+    .on('console', message => {
+      if(!containsExpression(message.text(),allowedMsg)){
+        console.log(`- ${message.type().substr(0, 3).toUpperCase()} ${message.text()} (${pageInfo.url})`);
+      }
+    })
+    .on('pageerror', message => {
+      if(!containsExpression(message,allowedErr)){
+        console.log(`- ERROR ${message} (${pageInfo.url})`);
+      }
+    })
+    .on('response', response => {
+      if(!containsExpression(response.status(),allowedStatus)){
+        console.log(`- STATUS ${response.status()} ${response.url()}  (${pageInfo.url})`);
+      }
+    })
+    .on('requestfailed', request => {
+      if(!containsExpression(request.url(), allowedFailed)){
+        console.log(`- FAIL ${request.failure().errorText} ${request.url()}  (${pageInfo.url})`);
+      }
+    })
+
   try {
 	await page.setViewport({
 	  width: 1920,
@@ -90,13 +116,15 @@ async function auditPage(browser, pageInfo) {
       timeout: TIMEOUT
     });
 
-	console.log(`- ${pageInfo.url}`);
+	//console.log(`- LOAD ${pageInfo.url}`);
     await page.evaluate(auditScript);
 	//await page.addScriptTag({ content: auditScript });
 
-	await page.waitForSelector('#checkA11YPanel', { timeout: 5000 });
+	await page.waitForSelector('#checkA11YPanel', { timeout: 20000 }); // 20 secondes
 
     const result = await page.evaluate(getExtractor());
+
+    console.error(`✅ ${pageInfo.url}`);
 
     return {
       id: pageInfo.id,
@@ -107,7 +135,8 @@ async function auditPage(browser, pageInfo) {
     };
 
   } catch (err) {
-	//await page.screenshot({ path: `debug/debug-${pageInfo.id}.png` });
+
+    //await page.screenshot({ path: `debug/debug-${pageInfo.id}.png` });
     console.error(`❌ Erreur sur ${pageInfo.url}:`, err.message);
 
     return {
@@ -124,11 +153,15 @@ async function auditPage(browser, pageInfo) {
   }
 }
 
+function containsExpression(sentence, expressions) {
+  return expressions.some(expr => sentence.toString().includes(expr));
+}
+
 // ---------------------------------------------
 // PIPELINE PRINCIPAL
 // ---------------------------------------------
 (async () => {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: true, args: ['--lang=fr'] });
   const limit = pLimit(CONCURRENCY);
 
   const tasks = validPages.map(pageInfo =>
