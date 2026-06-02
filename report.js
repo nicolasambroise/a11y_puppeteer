@@ -122,7 +122,7 @@ const topProblems = Object.values(problemCounter)
 // ------------------------------------------------------
 const report = {
   generatedAt: `${date} ${time}`,
-  pluginVersion: "2.5.0",
+  pluginVersion: "2.5.1",
   totalPages: results.length,   
   totals,
   topPages,

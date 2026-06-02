@@ -48,7 +48,7 @@ function getExtractor() {
     };
 
     items.forEach(li => {
-      const a = li.querySelector('a');
+      const a = li.querySelector('.result-focus');
       const msg = li.querySelector('.result-msg');
 
       const code = a?.textContent.trim() || null;
