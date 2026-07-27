@@ -1,6 +1,7 @@
 /* Script Check A11Y Renowify Manual*/
 // Note : Préfix NIA pour "Navigator Inspector for Accessibility" à modifier par qqch en rapport avec Renow
 const pluginUrl = 'https://webux.gouv.etat.lu/a11y/a11y_renowify';
+//const pluginUrl = 'https://webux.intranet.etat.lu/a11y/a11y_renowify';
 
 function run_renowify_static(debug = false, redac = true, nc = false) {
   /*- -------------------------------------------------------------------------------- */

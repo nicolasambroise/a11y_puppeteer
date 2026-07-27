@@ -88,13 +88,19 @@
 <div id="summary" class="grid grid-2"></div>
 
 <h2>Évolution historique</h2>
-<canvas id="chartEvolution" height="100"></canvas>
+<div class="card">
+  <canvas id="chartEvolution" height="100"></canvas>
+</div>
+
 
 <h2>Top pages par criticité</h2>
 <div id="topPages" class="grid grid-2"></div>
 
 <h2>Problèmes les plus fréquents par criticité</h2>
-<div id="topProblemsContainer" class="grid grid-2"</div>
+<div id="topProblemsContainer" class="grid grid-2"></div>
+
+<h2>Update DB</h2>
+<div id="updateDB" class="grid grid-2"></div>
 
 <!--script src="./dashboard.js"></script-->
 <script>
@@ -126,7 +132,7 @@
   function renderLatestDate(latest){
     //console.log(latest);
     const container = document.getElementById('latest');
-    container.innerHTML = `<p>Dernier run : ${latest.generatedAt} sur ${latest.totalPages} pages (Version : ${latest.pluginVersion})</p>`;
+    container.innerHTML = `<p>Dernier run : <em>${latest.generatedAt}</em> sur ${latest.totalPages} pages (Version : ${latest.pluginVersion})</p>`;
   }
 
   function trendColor(diff) {
@@ -220,6 +226,7 @@
             <th>Code</th>
             <th>Message</th>
             <th>Nb</th>
+            <th>%</th>
             <th>Tendance</th>
           </tr>
           ${list_latest.slice(0, 10).map(p => {
@@ -231,6 +238,7 @@
                 <td>${codeCleaned}</td>
                 <td>${p.message}</td>
                 <td><strong>${p.count}</strong></td>
+                <td>${Math.round(p.count * 100 / latest.totalPages)}%</td>
                 <td>${trendColor(diff)}</td>
               </tr>
             `;
@@ -259,6 +267,7 @@
     const c3AllPagesNb = reports.map(r => r.totals[3]);
     const c3 = reports.map(r => (Math.round(r.totals[3]/r.totalPages * 1000) / 1000).toFixed(3));
     const version = reports.map(r => r.pluginVersion);
+    const totalPages = reports.map(r => r.totalPages);
     console.log(version);
 
     const tooltipSum = (tooltipItems) => {
@@ -279,7 +288,8 @@
       const dataIndex = tooltipItems[0]["dataIndex"];
       const c2pagesNb = c2AllPagesNb[dataIndex];
       const c3pagesNb = c3AllPagesNb[dataIndex];
-      return 'Erreurs: '+ c3pagesNb+ ' | Alertes: '+c2pagesNb;
+      const totalPagesNb = totalPages[dataIndex];
+      return 'Erreurs: '+ c3pagesNb+ ' | Alertes: '+c2pagesNb + ' | Pages:' + totalPagesNb;
     };
 
     new Chart(document.getElementById('chartEvolution'), {
@@ -309,6 +319,38 @@
     });
   }
 
+  function cleanQuote(item){
+    return item ? item.replaceAll("'","’") : "";
+  }
+
+  function renderUpdateDB(latest){
+    console.log(latest);
+    const container = document.getElementById('updateDB');
+
+    const newTitle = latest.results.filter(el => !el.error && el.originalTitle !== cleanQuote(el.title) && cleanQuote(el.title).indexOf("404") < 0);
+    const newLang = latest.results.filter(el => !el.error &&el.lang && el.iso != el.lang);
+    const newStatus = latest.results.filter(el => !el.error && el.status != 200);
+
+    let query = ""
+    let msg = ""
+
+    newTitle.forEach(function(item) {
+      msg += `<li>TITLE : [${item.id}] ${item.originalTitle} => ${cleanQuote(item.title)}</li>`;
+      query += `<li>UPDATE page SET title = '${cleanQuote(item.title)}' WHERE id=${item.id};</li>`;
+    });
+
+    newLang.forEach(function(item) {
+      msg += `<li>LANG : [${item.id}] ${item.iso} => ${item.lang}</li>`;
+      query += `<li>UPDATE page SET iso = '${item.iso}' WHERE id=${item.id};</li>`;
+    });
+
+    newStatus.forEach(function(item) {
+      msg += `<li>STATUS : [${item.id}] '200' => ${item.status}</li>`;
+      query += `<li>UPDATE page SET status = ${item.status} WHERE id=${item.id};</li>`;
+    });
+
+    container.innerHTML = `<div class="card"><ul>${msg}</ul></div><div class="card"><ul>${query}</ul></div>`;
+  }
 
 
   (async () => {
@@ -320,6 +362,7 @@
     renderTopPages(latest, previous);
     renderTopProblems(latest, previous);
     renderEvolution(reports);
+    renderUpdateDB(latest)
   })();
 
 </script>

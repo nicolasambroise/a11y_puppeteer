@@ -7,19 +7,23 @@ const fs = require('fs');
 const pLimit = require('p-limit');
 const puppeteer = require('puppeteer');
 
+
 // ---------------------------------------------
 // CONFIG
 // ---------------------------------------------
-const INPUT_FILE = 'prodV3MainData.json';
+//const INPUT_FILE = 'prodV3Main.json';
+const INPUT_FILE = 'prodV3detailled.json';
+//const INPUT_FILE = 'prodV3Custom.json';
 const OUTPUT_FILE = 'results.json';
 const CONCURRENCY = 5; // nombre de pages en parallèle
-const TIMEOUT = 60000; // timeout navigation
+const TIMEOUT = 120000; // timeout navigation = 2min
 
 // ---------------------------------------------
 // CHARGEMENT DES DONNÉES
 // ---------------------------------------------
 const pages = JSON.parse(fs.readFileSync(INPUT_FILE, 'utf8'));
-const validPages = pages.filter(p => p.status === 200);
+const pagesObj = 'data' in pages ? pages.data : pages;
+const validPages = pagesObj.filter(p => p.status === 200);
 
 console.log(`➡️  ${validPages.length} pages à analyser\n`);
 
@@ -35,17 +39,32 @@ function getExtractor() {
   return () => {
     // Récupère tous les <li> du panneau
     const items = [...document.querySelectorAll('#checkA11YPanel li')];
+    const url = document.querySelector('#site_url')?.textContent.trim();
+    const lang = document.querySelector('#site_lang')?.textContent.trim();
+    const title = document.querySelector('#site_title')?.textContent.trim();
 
     const result = {
-      url: document.querySelector('#site_url')?.textContent.trim(),
-      lang: document.querySelector('#site_lang')?.textContent.trim(),
-      title: document.querySelector('#site_title')?.textContent.trim(),
+      url: url,
+      lang: lang,
+      title: title,
+
       criticity: {
         1: [], // yellow
         2: [], // orange
         3: []  // red
       }
     };
+
+    // Check Cloudflare
+    const clf = document.querySelectorAll('div#cf-error-details, form#challenge-form');
+    if (clf.length > 0 || title === "Vérification de sécurité - V2") {
+      console.log('⚠️ Cloudflare détecté sur', url);
+      result.criticity[3].push({
+        "CLF":"Captcha Cloudflare"
+      });
+
+     return result
+    }
 
     items.forEach(li => {
       const a = li.querySelector('.result-focus');
@@ -75,17 +94,18 @@ function getExtractor() {
 // ---------------------------------------------
 // FONCTION D'AUDIT D'UNE PAGE
 // ---------------------------------------------
-async function auditPage(browser, pageInfo) {
+async function auditPage(browser, pageInfo) { //, stealthMode
   const page = await browser.newPage();
 
-  const allowedMsg = ['[FRC Agent] IndexedDB', 'Access to fetch at', 'has been blocked by CORS policy','chat-window-messages'];
+  const allowedMsg = ['[FRC Agent] IndexedDB', 'Access to fetch at', 'has been blocked by CORS policy','chat-window-messages','Slow network is detected','font-size:0;color:transparent','Mixed Content','Failed to execute \'postMessage\' on \'DOMWindow\'','window.ReadSpeaker','An iframe which has both allow-scripts and allow-same-origin','Geometry exceeds allowed extent'];
+  const allowedType = ['LOG','COU','DEB','DIR','END','INF','TAB','TRA','STA']
   const allowedErr = ['TypeError: Cannot read properties of'];
-  const allowedStatus = [200,201,206,301,302,303,304]
+  const allowedStatus = [200,201,202,203,204,205,206,301,302,303,304]
   const allowedFailed = ['https://etat.kiss.lu', 'https://eu.frcapi.com/api/v2/captcha']
 
   page
     .on('console', message => {
-      if(!containsExpression(message.text(),allowedMsg)){
+      if(!containsExpression(message.type().substr(0, 3).toUpperCase(),allowedType) && !containsExpression(message.text(),allowedMsg)){
         console.log(`- ${message.type().substr(0, 3).toUpperCase()} ${message.text()} (${pageInfo.url})`);
       }
     })
@@ -109,27 +129,31 @@ async function auditPage(browser, pageInfo) {
 	await page.setViewport({
 	  width: 1920,
 	  height: 1080
-	});  
-	  
-    await page.goto(pageInfo.url, {
+	});
+
+  const response = await page.goto(pageInfo.url, {
       waitUntil: 'networkidle0',
       timeout: TIMEOUT
-    });
+  });
 
 	//console.log(`- LOAD ${pageInfo.url}`);
-    await page.evaluate(auditScript);
+  await page.evaluate(auditScript);
 	//await page.addScriptTag({ content: auditScript });
 
 	await page.waitForSelector('#checkA11YPanel', { timeout: 20000 }); // 20 secondes
 
-    const result = await page.evaluate(getExtractor());
+  const statusCode = response?.status() ?? 0;
 
-    console.error(`✅ ${pageInfo.url}`);
+  const result = await page.evaluate(getExtractor());
+
+  console.error(`✅ ${pageInfo.url}`);
+
 
     return {
       id: pageInfo.id,
       url: pageInfo.url,
       iso: pageInfo.iso,
+      status: statusCode,
       originalTitle: pageInfo.title,
       ...result
     };
@@ -157,20 +181,66 @@ function containsExpression(sentence, expressions) {
   return expressions.some(expr => sentence.toString().includes(expr));
 }
 
+function requiresHeadful(url) {
+  // URLs exactes - Element bloqué par WAF/Cloudflare sur ces sites (iframe, script, ...)
+  const exactUrls = [
+    "https://armee.public.lu/fr.html",
+    "https://armee.public.lu/fr/missions/operations-en-cours/eumam-ua.html",
+    "https://luxembourg.public.lu/fr/societe-et-culture/creation-artistique/film-fund.html",
+    "https://logement.public.lu/fr/observatoire-habitat/prix-de-vente/prix-de-vente-des-logements.html",
+    "https://fluvial.public.lu/fr.html",
+    "https://fonds-europeens.public.lu/fr/projets.html",
+    "https://transports.public.lu/fr/plus/publications.html"
+  ];
+
+  // Site Complet - Présence d'une sécurité WAF/Cloudflare/TAM sur ces sites
+  const patterns = [
+    "lu-alert.lu",
+    "cyberfortress.lu",
+  ];
+
+  // Test exact
+  if (exactUrls.includes(url)) return true;
+
+  // Test partiel
+  return patterns.some(pattern => url.includes(pattern));
+}
+
 // ---------------------------------------------
 // PIPELINE PRINCIPAL
 // ---------------------------------------------
 (async () => {
-  const browser = await puppeteer.launch({ headless: true, args: ['--lang=fr'] });
+  const browserArgs = [
+    '--lang=fr',
+    '--disable-features=LocalNetworkAccess',
+    '--allow-insecure-localhost',
+    '--disable-web-security'];
+
+  const browserHeadless = await puppeteer.launch({
+    headless: true,
+    args: browserArgs
+  });
+
+  const browserHeadful = await puppeteer.launch({
+    headless: false,
+    args: browserArgs
+  });
+
+
   const limit = pLimit(CONCURRENCY);
 
-  const tasks = validPages.map(pageInfo =>
-    limit(() => auditPage(browser, pageInfo))
-  );
+  const tasks = validPages.map(pageInfo => {
+    const useHeadful = requiresHeadful(pageInfo.url);
+
+    const browser = useHeadful ? browserHeadful : browserHeadless;
+    if(useHeadful) console.log("> use Headful browser for "+pageInfo.url)
+    return limit(() => auditPage(browser, pageInfo));
+  });
 
   const results = await Promise.all(tasks);
 
-  await browser.close();
+  await browserHeadless.close();
+  await browserHeadful.close();
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
 

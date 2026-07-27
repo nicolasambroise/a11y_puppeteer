@@ -19,7 +19,7 @@ const TOP_PROBLEMS = 50;
 // ------------------------------------------------------
 function normalizeProblemMessage(message) {
   const prefix = "Absence de bouton pour déplier le sous-menu pour l'élément de menu";
-  if (message.startsWith(prefix)) return prefix;
+  if (message && message.startsWith(prefix)) return prefix;
   return message;
 }
 
@@ -72,7 +72,7 @@ function topPagesForCriticity(level) {
       id: r.id,
       url: r.url,
       iso: r.iso,
-      title: r.originalTitle,
+      title: r.originalTitle ? r.originalTitle : r.title,
       count: r.criticity[level].length,
       criticity: r.criticity
     }))
