@@ -41,11 +41,26 @@ if (!fs.existsSync(REPORTS_DIR)) {
 // GÉNÉRATION DU NOM DE FICHIER DATÉ
 // ------------------------------------------------------
 const now = new Date();
-const timestamp = now.toISOString().replace(/[:.]/g, '-');
+const timestamp = now.toISOString().replace(/[:.]/g, '-').replace('T', '-').replace('Z', '');
 const date = timestamp.slice(0, 10);
-const time = timestamp.slice(11, 19);
+const time = timestamp.slice(11);
 
-const OUTPUT_FILE = path.join(REPORTS_DIR, `report-${date}-${time}.json`);
+let OUTPUT_FILE = path.join(REPORTS_DIR, `report-${date}-${time}.json`);
+let collision = 1;
+while (fs.existsSync(OUTPUT_FILE)) {
+  OUTPUT_FILE = path.join(REPORTS_DIR, `report-${date}-${time}-${collision++}.json`);
+}
+
+function writeJsonAtomically(filePath, value) {
+  const tempFile = `${filePath}.${process.pid}.${Date.now()}.tmp`;
+  try {
+    fs.writeFileSync(tempFile, JSON.stringify(value, null, 2), { flag: 'wx' });
+    fs.renameSync(tempFile, filePath);
+  } catch (error) {
+    if (fs.existsSync(tempFile)) fs.unlinkSync(tempFile);
+    throw error;
+  }
+}
 
 // ------------------------------------------------------
 // CHARGEMENT DES DONNÉES
@@ -122,7 +137,7 @@ const topProblems = Object.values(problemCounter)
 // 4. STRUCTURE DU RAPPORT FINAL
 // ------------------------------------------------------
 const report = {
-  generatedAt: `${date} ${time}`,
+  generatedAt: now.toISOString(),
   pluginVersion: "2.5.1",
   totalPages: results.length,   
   totals,
@@ -133,7 +148,7 @@ const report = {
 
 
 // SAUVEGARDE DU RAPPORT
-fs.writeFileSync(OUTPUT_FILE, JSON.stringify(report, null, 2));
+writeJsonAtomically(OUTPUT_FILE, report);
 console.log(`✅ Rapport généré : ${OUTPUT_FILE}`);
 
 // ------------------------------------------------------
@@ -143,9 +158,9 @@ const reportFiles = fs.readdirSync(REPORTS_DIR)
   .filter(f => f.startsWith('report-') && f.endsWith('.json'))
   .sort();
 
-fs.writeFileSync(
+writeJsonAtomically(
   path.join(REPORTS_DIR, 'index.json'),
-  JSON.stringify(reportFiles, null, 2)
+  reportFiles
 );
 
 console.log(`📁 index.json mis à jour`);
