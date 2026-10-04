@@ -9,8 +9,8 @@ const path = require('path');
 // ------------------------------------------------------
 // CONFIG
 // ------------------------------------------------------
-const INPUT_FILE = 'results.json';
-const REPORTS_DIR = './reports';
+const INPUT_FILE = path.join(__dirname, 'results.json');
+const REPORTS_DIR = path.join(__dirname, 'reports');
 const TOP_PAGES = 50;
 const TOP_PROBLEMS = 50;
 
@@ -34,15 +34,16 @@ function cleanCode(code) {
 // CRÉATION DU DOSSIER DES RAPPORTS
 // ------------------------------------------------------
 if (!fs.existsSync(REPORTS_DIR)) {
-  fs.mkdirSync(REPORTS_DIR);
+  fs.mkdirSync(REPORTS_DIR, { recursive: true });
 }
 
 // ------------------------------------------------------
 // GÉNÉRATION DU NOM DE FICHIER DATÉ
 // ------------------------------------------------------
 const now = new Date();
-const date = now.toISOString().split('T')[0];
-const time = now.toTimeString().split(' ')[0].replace(/:/g, '-');
+const timestamp = now.toISOString().replace(/[:.]/g, '-');
+const date = timestamp.slice(0, 10);
+const time = timestamp.slice(11, 19);
 
 const OUTPUT_FILE = path.join(REPORTS_DIR, `report-${date}-${time}.json`);
 

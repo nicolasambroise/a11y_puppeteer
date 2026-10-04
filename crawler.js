@@ -4,6 +4,7 @@
 // ---------------------------------------------
 
 const fs = require('fs');
+const path = require('path');
 const pLimit = require('p-limit');
 const puppeteer = require('puppeteer');
 
@@ -12,9 +13,9 @@ const puppeteer = require('puppeteer');
 // CONFIG
 // ---------------------------------------------
 //const INPUT_FILE = 'prodV3Main.json';
-const INPUT_FILE = 'prodV3detailled.json';
+const INPUT_FILE = path.resolve(__dirname, process.argv[2] || 'prodV3detailled.json');
 //const INPUT_FILE = 'prodV3Custom.json';
-const OUTPUT_FILE = 'results.json';
+const OUTPUT_FILE = path.join(__dirname, 'results.json');
 const CONCURRENCY = 5; // nombre de pages en parallèle
 const TIMEOUT = 120000; // timeout navigation = 2min
 
@@ -39,7 +40,7 @@ console.log(`➡️  ${validPages.length} pages à analyser\n`);
 // ---------------------------------------------
 // CHARGEMENT DU SCRIPT D'AUDIT
 // ---------------------------------------------
-const auditScript = fs.readFileSync('./audit.js', 'utf8');
+const auditScript = fs.readFileSync(path.join(__dirname, 'audit.js'), 'utf8');
 
 // ---------------------------------------------
 // EXTRACTEUR DOM (exécuté dans la page)
@@ -144,7 +145,7 @@ async function auditPage(browser, pageInfo) { //, stealthMode
     });
 
     const response = await page.goto(pageInfo.url, {
-        waitUntil: 'networkidle0',
+        waitUntil: 'networkidle2',
         timeout: TIMEOUT
     });
 

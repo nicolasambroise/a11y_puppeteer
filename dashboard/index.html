@@ -104,26 +104,16 @@
 <!--script src="./dashboard.js"></script-->
 <script>
   async function loadReports() {
-    const files = await fetch('../reports/')
-      .then(r => r.text());
-
-    const jsonFiles = [...files.matchAll(/report-[\d\-]+\.json/g)]
-      .map(m => m[0])
-      .sort();
-
-    const reports = [];
-    //console.log(jsonFiles.length);
-    //console.log(uniq(jsonFiles).lenght);
-
-    for (const file of uniq(jsonFiles)) {
-      const data = await fetch('../reports/' + file).then(r => r.json());
-      reports.push({ file, ...data });
-    }
-
-    //console.log(reports.length);
-    return reports;
+    const response = await fetch('../reports/index.json');
+    if (!response.ok) throw new Error(`Impossible de lire l’index des rapports (${response.status})`);
+    const files = await response.json();
+    const reports = await Promise.all(files.map(async file => {
+      const reportResponse = await fetch('../reports/' + encodeURIComponent(file));
+      if (!reportResponse.ok) throw new Error(`Impossible de lire le rapport ${file}`);
+      return { file, ...await reportResponse.json() };
+    }));
+    return reports.sort((a, b) => a.generatedAt.localeCompare(b.generatedAt));
   }
-
   function uniq(a) {
     return Array.from(new Set(a));
   }
@@ -147,8 +137,8 @@
     const lt3 = latest.totals[3];
     const pt2 = previous.totals[2];
     const pt3 = previous.totals[3];
-    const diff_t2 = pt2 ? lt2 - pt2 : 0;
-    const diff_t3 = pt3 ? lt3 - pt3 : 0;
+    const diff_t2 = previous.generatedAt ? lt2 - pt2 : 0;
+    const diff_t3 = previous.generatedAt ? lt3 - pt3 : 0;
 
 
     container.innerHTML = `
@@ -157,7 +147,7 @@
       <ul>
 		  <li>Total : <strong>${lt2}</strong></li>
 		  <li>Tendance : ${trendColor(diff_t2)}</li>
-		  <li>Ratio : <strong>${(Math.round(lt2/latest.totalPages * 1000) / 1000).toFixed(3)} %</strong></li>
+		  <li>Occurrences pour 100 pages : <strong>${(Math.round(lt2/latest.totalPages * 100000) / 1000).toFixed(3)}</strong></li>
 	  </ul>
     </div>
 
@@ -166,7 +156,7 @@
 	  <ul>
 		<li>Total : <strong>${lt3}</strong></li>
         <li>Tendance : ${trendColor(diff_t3)}</li>
-	    <li>Ratio : <strong>${(Math.round(lt3/latest.totalPages * 1000) / 1000).toFixed(3)} %</strong></li>
+	    <li>Occurrences pour 100 pages : <strong>${(Math.round(lt3/latest.totalPages * 100000) / 1000).toFixed(3)}</strong></li>
     </div>
   `;
   }
@@ -225,7 +215,7 @@
             <th>Code</th>
             <th>Message</th>
             <th>Nb</th>
-            <th>%</th>
+            <th>Pour 100 pages</th>
             <th>Tendance</th>
           </tr>
           ${list_latest.slice(0, 10).map(p => {
@@ -262,9 +252,9 @@
   function renderEvolution(reports) {
     const labels = reports.map(r => r.generatedAt);
     const c2AllPagesNb = reports.map(r => r.totals[2]);
-    const c2 = reports.map(r => (Math.round(r.totals[2]/r.totalPages * 1000) / 1000).toFixed(3));
+    const c2 = reports.map(r => (Math.round(r.totals[2]/r.totalPages * 100000) / 1000).toFixed(3));
     const c3AllPagesNb = reports.map(r => r.totals[3]);
-    const c3 = reports.map(r => (Math.round(r.totals[3]/r.totalPages * 1000) / 1000).toFixed(3));
+    const c3 = reports.map(r => (Math.round(r.totals[3]/r.totalPages * 100000) / 1000).toFixed(3));
     const version = reports.map(r => r.pluginVersion);
     const totalPages = reports.map(r => r.totalPages);
     console.log(version);
@@ -296,8 +286,8 @@
       data: {
         labels,
         datasets: [
-          { label: 'Alertes (%)', data: c2, borderColor: '#FF9800',  pointStyle: 'circle', backgroundColor: '#FF980066', tension: .2 },
-          { label: 'Erreurs (%)', data: c3, borderColor: '#F44336',  pointStyle: 'triangle', backgroundColor: '#F4433666', tension: .2 }
+          { label: 'Alertes pour 100 pages', data: c2, borderColor: '#FF9800',  pointStyle: 'circle', backgroundColor: '#FF980066', tension: .2 },
+          { label: 'Erreurs pour 100 pages', data: c3, borderColor: '#F44336',  pointStyle: 'triangle', backgroundColor: '#F4433666', tension: .2 }
         ],
       },
       options: {
@@ -365,7 +355,8 @@
   (async () => {
     const reports = await loadReports();
     const latest = reports[reports.length - 1];
-    const previous = reports[reports.length - 2];
+    const previous = reports[reports.length - 2] || { totals: { 2: 0, 3: 0 }, topPages: { criticity2: [], criticity3: [] }, topProblems: [] };
+    if (!latest) { document.getElementById('latest').textContent = 'Aucun rapport disponible.'; return; }
     renderLatestDate(latest);
     renderSummary(latest, previous);
     renderTopPages(latest, previous);
