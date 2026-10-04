@@ -8,7 +8,6 @@
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!--link type="text/css" rel="stylesheet" src="./dashboard.css"-->
   <style>
   body {
   font-family: "Segoe UI", Roboto, sans-serif;
@@ -132,7 +131,7 @@
   function renderLatestDate(latest){
     //console.log(latest);
     const container = document.getElementById('latest');
-    container.innerHTML = `<p>Dernier run : <em>${latest.generatedAt}</em> sur ${latest.totalPages} pages (Version : ${latest.pluginVersion})</p>`;
+    container.innerHTML = `<p>Dernier run : <em>${escapeHtml(latest.generatedAt)}</em> sur ${latest.totalPages} pages (Version : ${escapeHtml(latest.pluginVersion)})</p>`;
   }
 
   function trendColor(diff) {
@@ -190,7 +189,7 @@
         const diff = prev ? p.count - prev.count : 0;
         return `
 			<tr>
-              <td>${p.title}<br><small>${p.url}</small></td>
+              <td>${escapeHtml(p.title)}<br><small>${escapeHtml(p.url)}</small></td>
               <td><strong>${p.count}</strong></td>
               <td>${trendColor(diff)}</td>
             </tr>
@@ -236,7 +235,7 @@
         return `
               <tr>
                 <td>${codeCleaned}</td>
-                <td>${p.message}</td>
+                <td>${escapeHtml(p.message)}</td>
                 <td><strong>${p.count}</strong></td>
                 <td>${Math.round(p.count * 100 / latest.totalPages)}%</td>
                 <td>${trendColor(diff)}</td>
@@ -321,6 +320,16 @@
 
   function cleanQuote(item){
     return item ? item.replaceAll("'","’") : "";
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, char => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    })[char]);
   }
 
   function renderUpdateDB(latest){

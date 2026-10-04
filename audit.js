@@ -8,8 +8,10 @@ function run_renowify_static(debug = false, redac = true, nc = false) {
   // Add JS
   // - double sécurité pour que ce sript puisse également être appelé par l'extention chrome
   if (!document.body.classList.contains('renowify-script-injected')) {
+    window.__renowifyAuditStatus = 'running';
     const script_loaded = loadScript(pluginUrl);
-	  Promise.all([script_loaded]).then(function () {
+	  Promise.all([script_loaded])
+      .then(function () {
 		
       // Open Accordion before running check
       beforeCheck();
@@ -31,7 +33,7 @@ function run_renowify_static(debug = false, redac = true, nc = false) {
         check_part_14,
         check_part_15
       ];    
-	 const checksPromises = checkPartFunctions.map(partPromiseResolve);
+	    const checksPromises = checkPartFunctions.map(partPromiseResolve);
 
       async function resolveChecksPromise() {
         // Executer les tests
@@ -42,7 +44,19 @@ function run_renowify_static(debug = false, redac = true, nc = false) {
         activateCheckA11YPanel();
       }
 
-      resolveChecksPromise();
+      window.__renowifyAuditStatus = 'running';
+
+      resolveChecksPromise()
+        .then(() => {
+          window.__renowifyAuditStatus = 'done';
+        })
+        .catch(error => {
+          window.__renowifyAuditStatus = 'error';
+          window.__renowifyAuditError = error.message;
+        });
+    }).catch(error => {
+      window.__renowifyAuditStatus = 'error';
+      window.__renowifyAuditError = error.message;
     });
   }
 }
@@ -84,7 +98,8 @@ function logPromisesResult(promisesResults) {
 
 if (!document.body.classList.contains('renowify-script-injected')) {
   // Environnement
-  setTimeout(run_renowify_static(false, false, true), 1);
+  //setTimeout(run_renowify_static(false, false, true), 1);
+  setTimeout(() => run_renowify_static(false, false, true), 1);
 } else {
   alert("Merci de recharger la page avant d'effectuer un nouveau check !");
 }

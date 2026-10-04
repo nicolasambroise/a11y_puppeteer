@@ -23,7 +23,16 @@ const TIMEOUT = 120000; // timeout navigation = 2min
 // ---------------------------------------------
 const pages = JSON.parse(fs.readFileSync(INPUT_FILE, 'utf8'));
 const pagesObj = 'data' in pages ? pages.data : pages;
-const validPages = pagesObj.filter(p => p.status === 200);
+const validPages = pagesObj.filter(p => {
+  if (p.status !== 200) return false;
+
+  try {
+    const url = new URL(p.url);
+    return url.protocol === 'https:' || url.protocol === 'http:';
+  } catch {
+    return false;
+  }
+});
 
 console.log(`➡️  ${validPages.length} pages à analyser\n`);
 
@@ -95,7 +104,7 @@ function getExtractor() {
 // FONCTION D'AUDIT D'UNE PAGE
 // ---------------------------------------------
 async function auditPage(browser, pageInfo) { //, stealthMode
-  const page = await browser.newPage();
+  let page; 
 
   const allowedMsg = ['[FRC Agent] IndexedDB', 'Access to fetch at', 'has been blocked by CORS policy','chat-window-messages','Slow network is detected','font-size:0;color:transparent','Mixed Content','Failed to execute \'postMessage\' on \'DOMWindow\'','window.ReadSpeaker','An iframe which has both allow-scripts and allow-same-origin','Geometry exceeds allowed extent'];
   const allowedType = ['LOG','COU','DEB','DIR','END','INF','TAB','TRA','STA']
@@ -103,50 +112,68 @@ async function auditPage(browser, pageInfo) { //, stealthMode
   const allowedStatus = [200,201,202,203,204,205,206,301,302,303,304]
   const allowedFailed = ['https://etat.kiss.lu', 'https://eu.frcapi.com/api/v2/captcha']
 
-  page
-    .on('console', message => {
-      if(!containsExpression(message.type().substr(0, 3).toUpperCase(),allowedType) && !containsExpression(message.text(),allowedMsg)){
-        console.log(`- ${message.type().substr(0, 3).toUpperCase()} ${message.text()} (${pageInfo.url})`);
-      }
-    })
-    .on('pageerror', message => {
-      if(!containsExpression(message,allowedErr)){
-        console.log(`- ERROR ${message} (${pageInfo.url})`);
-      }
-    })
-    .on('response', response => {
-      if(!containsExpression(response.status(),allowedStatus)){
-        console.log(`- STATUS ${response.status()} ${response.url()}  (${pageInfo.url})`);
-      }
-    })
-    .on('requestfailed', request => {
-      if(!containsExpression(request.url(), allowedFailed)){
-        console.log(`- FAIL ${request.failure().errorText} ${request.url()}  (${pageInfo.url})`);
-      }
-    })
-
   try {
-	await page.setViewport({
-	  width: 1920,
-	  height: 1080
-	});
+    page = await browser.newPage();
 
-  const response = await page.goto(pageInfo.url, {
-      waitUntil: 'networkidle0',
-      timeout: TIMEOUT
-  });
+    page
+      .on('console', message => {
+        if(!containsExpression(message.type().substr(0, 3).toUpperCase(),allowedType) && !containsExpression(message.text(),allowedMsg)){
+          console.log(`- ${message.type().substr(0, 3).toUpperCase()} ${message.text()} (${pageInfo.url})`);
+        }
+      })
+      .on('pageerror', message => {
+        if(!containsExpression(message,allowedErr)){
+          console.log(`- ERROR ${message} (${pageInfo.url})`);
+        }
+      })
+      .on('response', response => {
+        if(!containsExpression(response.status(),allowedStatus)){
+          console.log(`- STATUS ${response.status()} ${response.url()}  (${pageInfo.url})`);
+        }
+      })
+      .on('requestfailed', request => {
+        if(!containsExpression(request.url(), allowedFailed)){
+          console.log(`- FAIL ${request.failure().errorText} ${request.url()}  (${pageInfo.url})`);
+        }
+      })
 
-	//console.log(`- LOAD ${pageInfo.url}`);
-  await page.evaluate(auditScript);
-	//await page.addScriptTag({ content: auditScript });
+    
+    await page.setViewport({
+      width: 1920,
+      height: 1080
+    });
 
-	await page.waitForSelector('#checkA11YPanel', { timeout: 20000 }); // 20 secondes
+    const response = await page.goto(pageInfo.url, {
+        waitUntil: 'networkidle0',
+        timeout: TIMEOUT
+    });
 
-  const statusCode = response?.status() ?? 0;
+    //console.log(`- LOAD ${pageInfo.url}`);
+    await page.evaluate(auditScript);
+    //await page.addScriptTag({ content: auditScript });
 
-  const result = await page.evaluate(getExtractor());
+    await page.waitForFunction(
+      () => window.__renowifyAuditStatus === 'done'
+        || window.__renowifyAuditStatus === 'error',
+      { timeout: 60_000 }
+    );
 
-  console.error(`✅ ${pageInfo.url}`);
+    const auditStatus = await page.evaluate(() => ({
+      status: window.__renowifyAuditStatus,
+      error: window.__renowifyAuditError
+    }));
+
+    if (auditStatus.status === 'error') {
+      throw new Error(`Échec de l’audit : ${auditStatus.error}`);
+    }
+
+    await page.waitForSelector('#checkA11YPanel', { timeout: 20000 }); // 20 secondes
+
+    const statusCode = response?.status() ?? 0;
+
+    const result = await page.evaluate(getExtractor());
+
+    console.error(`✅ ${pageInfo.url}`);
 
 
     return {
@@ -173,7 +200,11 @@ async function auditPage(browser, pageInfo) { //, stealthMode
     };
 
   } finally {
-    await page.close();
+    if (page) {
+      await page.close().catch(err => {
+        console.error(`Erreur fermeture page ${pageInfo.url}:`, err.message);
+      });
+    }
   }
 }
 
@@ -210,11 +241,15 @@ function requiresHeadful(url) {
 // PIPELINE PRINCIPAL
 // ---------------------------------------------
 (async () => {
-  const browserArgs = [
+  /*const browserArgs = [
     '--lang=fr',
     '--disable-features=LocalNetworkAccess',
     '--allow-insecure-localhost',
-    '--disable-web-security'];
+    '--disable-web-security'];*/
+
+  const browserArgs = [
+    '--lang=fr'
+  ];
 
   const browserHeadless = await puppeteer.launch({
     headless: true,
@@ -237,13 +272,15 @@ function requiresHeadful(url) {
     return limit(() => auditPage(browser, pageInfo));
   });
 
-  const results = await Promise.all(tasks);
-
-  await browserHeadless.close();
-  await browserHeadful.close();
-
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
-
-  console.log(`\n✅ Audit terminé`);
-  console.log(`📁 Résultats enregistrés dans ${OUTPUT_FILE}`);
+  try {
+    const results = await Promise.all(tasks);
+    console.log(`\n✅ Audit terminé`);
+    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
+    console.log(`📁 Résultats enregistrés dans ${OUTPUT_FILE}`);
+  } finally {
+    await Promise.allSettled([
+      browserHeadless.close(),
+      browserHeadful.close()
+    ]);
+  }
 })();
