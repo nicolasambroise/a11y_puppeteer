@@ -3,14 +3,14 @@
 //  ET PAR PROBLÈME + NETTOYAGE + FUSION + INDEX.JSON
 // ------------------------------------------------------
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // ------------------------------------------------------
 // CONFIG
 // ------------------------------------------------------
-const INPUT_FILE = path.join(__dirname, 'results.json');
-const REPORTS_DIR = path.join(__dirname, 'reports');
+const INPUT_FILE = path.join(__dirname, "results.json");
+const REPORTS_DIR = path.join(__dirname, "reports");
 const TOP_PAGES = 50;
 const TOP_PROBLEMS = 50;
 
@@ -18,7 +18,8 @@ const TOP_PROBLEMS = 50;
 // UTILITAIRES
 // ------------------------------------------------------
 function normalizeProblemMessage(message) {
-  const prefix = "Absence de bouton pour déplier le sous-menu pour l'élément de menu";
+  const prefix =
+    "Absence de bouton pour déplier le sous-menu pour l'élément de menu";
   if (message && message.startsWith(prefix)) return prefix;
   return message;
 }
@@ -41,20 +42,27 @@ if (!fs.existsSync(REPORTS_DIR)) {
 // GÉNÉRATION DU NOM DE FICHIER DATÉ
 // ------------------------------------------------------
 const now = new Date();
-const timestamp = now.toISOString().replace(/[:.]/g, '-').replace('T', '-').replace('Z', '');
+const timestamp = now
+  .toISOString()
+  .replace(/[:.]/g, "-")
+  .replace("T", "-")
+  .replace("Z", "");
 const date = timestamp.slice(0, 10);
 const time = timestamp.slice(11);
 
 let OUTPUT_FILE = path.join(REPORTS_DIR, `report-${date}-${time}.json`);
 let collision = 1;
 while (fs.existsSync(OUTPUT_FILE)) {
-  OUTPUT_FILE = path.join(REPORTS_DIR, `report-${date}-${time}-${collision++}.json`);
+  OUTPUT_FILE = path.join(
+    REPORTS_DIR,
+    `report-${date}-${time}-${collision++}.json`,
+  );
 }
 
 function writeJsonAtomically(filePath, value) {
   const tempFile = `${filePath}.${process.pid}.${Date.now()}.tmp`;
   try {
-    fs.writeFileSync(tempFile, JSON.stringify(value, null, 2), { flag: 'wx' });
+    fs.writeFileSync(tempFile, JSON.stringify(value, null, 2), { flag: "wx" });
     fs.renameSync(tempFile, filePath);
   } catch (error) {
     if (fs.existsSync(tempFile)) fs.unlinkSync(tempFile);
@@ -65,7 +73,7 @@ function writeJsonAtomically(filePath, value) {
 // ------------------------------------------------------
 // CHARGEMENT DES DONNÉES
 // ------------------------------------------------------
-const results = JSON.parse(fs.readFileSync(INPUT_FILE, 'utf8'));
+const results = JSON.parse(fs.readFileSync(INPUT_FILE, "utf8"));
 
 console.log(`➡️ Analyse de ${results.length} pages`);
 
@@ -74,7 +82,7 @@ console.log(`➡️ Analyse de ${results.length} pages`);
 // ------------------------------------------------------
 const totals = { 2: 0, 3: 0 };
 
-results.forEach(r => {
+results.forEach((r) => {
   totals[2] += r.criticity[2].length;
   totals[3] += r.criticity[3].length;
 });
@@ -84,13 +92,13 @@ results.forEach(r => {
 // ------------------------------------------------------
 function topPagesForCriticity(level) {
   return [...results]
-    .map(r => ({
+    .map((r) => ({
       id: r.id,
       url: r.url,
       iso: r.iso,
       title: r.originalTitle ? r.originalTitle : r.title,
       count: r.criticity[level].length,
-      criticity: r.criticity
+      criticity: r.criticity,
     }))
     .sort((a, b) => b.count - a.count)
     .slice(0, TOP_PAGES);
@@ -98,7 +106,7 @@ function topPagesForCriticity(level) {
 
 const topPages = {
   criticity2: topPagesForCriticity(2),
-  criticity3: topPagesForCriticity(3)
+  criticity3: topPagesForCriticity(3),
 };
 
 // ------------------------------------------------------
@@ -106,9 +114,9 @@ const topPages = {
 // ------------------------------------------------------
 const problemCounter = {};
 
-results.forEach(r => {
-  [2, 3].forEach(level => {
-    r.criticity[level].forEach(p => {
+results.forEach((r) => {
+  [2, 3].forEach((level) => {
+    r.criticity[level].forEach((p) => {
       const normalizedMessage = normalizeProblemMessage(p.message);
       const cleanedCode = cleanCode(p.code);
 
@@ -119,7 +127,7 @@ results.forEach(r => {
           code: cleanedCode,
           message: normalizedMessage,
           criticity: level,
-          count: 0
+          count: 0,
         };
       }
 
@@ -132,20 +140,18 @@ const topProblems = Object.values(problemCounter)
   .sort((a, b) => b.count - a.count)
   .slice(0, TOP_PROBLEMS);
 
-
 // ------------------------------------------------------
 // 4. STRUCTURE DU RAPPORT FINAL
 // ------------------------------------------------------
 const report = {
   generatedAt: now.toISOString(),
   pluginVersion: "2.5.1",
-  totalPages: results.length,   
+  totalPages: results.length,
   totals,
   topPages,
   topProblems,
-  results
+  results,
 };
-
 
 // SAUVEGARDE DU RAPPORT
 writeJsonAtomically(OUTPUT_FILE, report);
@@ -154,13 +160,11 @@ console.log(`✅ Rapport généré : ${OUTPUT_FILE}`);
 // ------------------------------------------------------
 // 5. GÉNÉRATION DE index.json POUR LE DASHBOARD
 // ------------------------------------------------------
-const reportFiles = fs.readdirSync(REPORTS_DIR)
-  .filter(f => f.startsWith('report-') && f.endsWith('.json'))
+const reportFiles = fs
+  .readdirSync(REPORTS_DIR)
+  .filter((f) => f.startsWith("report-") && f.endsWith(".json"))
   .sort();
 
-writeJsonAtomically(
-  path.join(REPORTS_DIR, 'index.json'),
-  reportFiles
-);
+writeJsonAtomically(path.join(REPORTS_DIR, "index.json"), reportFiles);
 
 console.log(`📁 index.json mis à jour`);

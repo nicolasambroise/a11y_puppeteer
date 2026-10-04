@@ -4,7 +4,9 @@
   "description": "",
   "main": "crawler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -12,7 +14,12 @@
   "type": "commonjs",
   "dependencies": {
     "p-limit": "^3.1.0",
+    "prettier": "^3.9.9",
     "puppeteer": "^24.42.0",
     "puppeteer-core": "^24.42.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.12.0",
+    "globals": "^17.13.0"
   }
 }
