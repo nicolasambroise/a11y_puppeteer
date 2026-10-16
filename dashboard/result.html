@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Audit A11Y Renowify - Tableau Criticité</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+	body {
+	  font-family: "Segoe UI", Roboto, sans-serif;
+	  background: #f5f5f5;
+	  margin: 0;
+	  padding: 2rem;
+	}
+
+	h1 {
+	  font-size: 2rem;
+	  margin-bottom: 1rem;
+	}
+
+	h2 {
+	  margin-top: 2rem;
+	  margin-bottom: 1rem;
+	}
+	h3 {
+	  margin-top: .5rem;
+	  margin-bottom: .5rem;
+	}
+	.card {
+	  background: white;
+	  padding: .5rem 1.5rem;
+	  border-radius: 8px;
+	  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+	}
+	.yellow, .criticity1 { color: #FFC107; }
+    .orange, .criticity2 { color: #FF9800; }
+    .red, .criticity3 { color: #F44336; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+	  table-layout: fixed;
+    }
+    th, td {
+	  padding: .5rem;
+	  border-bottom: 1px solid #ddd;
+	  text-align: left;
+	  word-break: break-all;
+    }
+    th {
+      background: #f2f2f2;
+      cursor: pointer;
+      user-select: none;
+    }
+    th::after {
+      content: " ▼";
+	  color:#ddd;
+    }	
+    th.sorted-asc::after {
+      content: " ▲";
+	  color:#000;
+    }
+    th.sorted-desc::after {
+      content: " ▼";
+	  color:#000;
+    }
+	th:first-child{
+		width: 40px;
+	}
+	th:nth-child(4),
+	th:nth-child(5){
+		width: 60px;
+	}
+	#tableCriticity3{
+		border-left:5px solid #F44336;
+	}
+	#tableCriticity2{
+		border-left:5px solid #FF9800;
+	}
+  </style>
+</head>
+<body>
+
+<h1>Tableaux des NC</h1>
+
+<h2>Tableau des <span class="red">Erreurs</span> <em>(<span id="countCriticity3">X</span> resultat(s))</em></h2>
+<table id="tableCriticity3">
+  <thead>
+    <tr>
+      <th data-col="id">Id</th>
+      <th data-col="url">Url</th>
+      <th data-col="title">Title</th>
+      <th data-col="criticity_level">Level</th>
+      <th data-col="criticity_code">Code</th>
+      <th data-col="criticity_message">Message</th>
+	  <th data-col="decision">Decision</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<h2>Tableau des <span class="orange">Alertes</span> <em>(<span id="countCriticity2">X</span> resultat(s))</em></h2>
+
+<table id="tableCriticity2">
+  <thead>
+    <tr>
+      <th data-col="id">Id</th>
+      <th data-col="url">Url</th>
+      <th data-col="title">Title</th>
+      <th data-col="criticity_level">Level</th>
+      <th data-col="criticity_code">Code</th>
+      <th data-col="criticity_message">Message</th>
+	  <th data-col="decision">Decision</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+let originalRows = []; 
+let sortState = {
+  2: { col: null, dir: null },
+  3: { col: null, dir: null }
+};
+
+const wontdo = ["07-A"]
+const client = ["05-H"]
+
+async function loadData() {
+  const response = await fetch("../results.json");
+  const data = await response.json();
+
+  data.forEach(item => {
+    const { id, url, title, criticity } = item;
+
+    Object.entries(criticity).forEach(([level, entries]) => {
+      entries.forEach(entry => {
+	    if(entry.code){
+			const cleanCode = entry.code.split("\n")[0].trim();
+
+			const row = {
+			  id,
+			  url,
+			  title,
+			  criticity_level: Number(level),
+			  criticity_code: cleanCode,
+			  criticity_message: entry.message
+			};
+
+			originalRows.push(row);
+		}
+      });
+    });
+  });
+
+  renderTable(originalRows,3);
+  renderTable(originalRows,2);
+}
+
+function renderTable(rows, crit) {
+  const filteredRows = rows.filter(r => r.criticity_level === crit)
+  
+  document.querySelector(`#countCriticity${crit}`).innerText = filteredRows.length;
+  
+  const tbody = document.querySelector(`#tableCriticity${crit} tbody`);
+  tbody.innerHTML = "";
+
+  filteredRows.forEach(r => {
+	const decision = getDecision(r.criticity_code);
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${r.id}</td>
+      <td>${r.url}</td>
+      <td>${r.title}</td>
+      <td class="criticity${r.criticity_level}">${r.criticity_level}</td>
+      <td>${r.criticity_code}</td>
+      <td>${r.criticity_message}</td>
+	  <td>${decision}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+
+function getDecision(code){
+  if(wontdo.includes(code)){ return "Won't do"; }
+  if(client.includes(code)){ return "Client"; }
+  return "";
+}
+
+function sortTable(col, crit) {
+  const state = sortState[crit];
+
+  // cycle tri : asc → desc → original
+  if (state.col !== col) {
+    state.col = col;
+    state.dir = "asc";
+  } else if (state.dir === "asc") {
+    state.dir = "desc";
+  } else {
+    state.col = null;
+    state.dir = null;
+    renderTable(originalRows, crit);
+    return;
+  }
+
+  const filteredRows = originalRows.filter(r => r.criticity_level === crit);
+
+  const sorted = [...filteredRows].sort((a, b) => {
+    let v1 = a[col];
+    let v2 = b[col];
+
+    if (!isNaN(v1) && !isNaN(v2)) {
+      return state.dir === "asc" ? v1 - v2 : v2 - v1;
+    }
+
+    return state.dir === "asc"
+      ? v1.localeCompare(v2)
+      : v2.localeCompare(v1);
+  });
+
+  renderTable(sorted, crit);
+}
+
+document.querySelectorAll("#tableCriticity2 th").forEach(th => {
+  th.addEventListener("click", () => sortTable(th.dataset.col, 2));
+});
+
+document.querySelectorAll("#tableCriticity3 th").forEach(th => {
+  th.addEventListener("click", () => sortTable(th.dataset.col, 3));
+});
+
+loadData();
+</script>
+
+</body>
+</html>

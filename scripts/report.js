@@ -71,18 +71,70 @@ function topPagesForCriticity(level) {
     .map(r => ({
       id: r.id,
       url: r.url,
-      iso: r.iso,
       title: r.originalTitle ? r.originalTitle : r.title,
-      count: r.criticity[level].length,
-      criticity: r.criticity
+      count: r.criticity[level].length
     }))
     .sort((a, b) => b.count - a.count)
     .slice(0, TOP_PAGES);
 }
 
+function topPagesBothCriticity() {
+  return [...results]
+    .map(r => ({
+      id: r.id,
+      url: r.url,
+      title: r.originalTitle ? r.originalTitle : r.title,
+      count: r.criticity["2"].length + r.criticity["3"].length * 5,
+      total_crit2: r.criticity["2"].length,
+      total_crit3: r.criticity["3"].length
+    }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, TOP_PAGES);
+}
+
+function topPagesPerWebsite() {
+  const grouped = [...results].reduce((acc, r) => {
+      const domain = new URL(r.url).hostname;
+
+      if (!acc[domain]) {
+        acc[domain] = { total: 0, total_crit2: 0, total_crit3: 0, items: [] };
+      }
+
+      acc[domain].total += r.criticity["2"].length + r.criticity["3"].length * 5 || 0;
+      acc[domain].total_crit2 += r.criticity["2"].length;
+      acc[domain].total_crit3 += r.criticity["3"].length;
+      acc[domain].items.push(r.id);
+
+    return acc;
+  });
+
+  const topDomains = Object.entries(grouped)
+    .map(([url, data]) => ({
+      url,
+      ...data,
+      count: calculateRatio(data.total, data.items),
+    }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, TOP_PAGES);
+
+  console.log(topDomains)
+
+  return topDomains;
+}
+
+function calculateRatio(total,pages){
+  if(pages && pages.length > 0){
+    return total/pages.length
+  }
+
+  return 0;
+}
+
 const topPages = {
   criticity2: topPagesForCriticity(2),
-  criticity3: topPagesForCriticity(3)
+  criticity3: topPagesForCriticity(3),
+  both: topPagesBothCriticity(),
+  websites: topPagesPerWebsite()
 };
 
 // ------------------------------------------------------
@@ -122,7 +174,7 @@ const topProblems = Object.values(problemCounter)
 // ------------------------------------------------------
 const report = {
   generatedAt: `${date} ${time}`,
-  pluginVersion: "2.5.1",
+  pluginVersion: "2.5.2",
   totalPages: results.length,   
   totals,
   topPages,

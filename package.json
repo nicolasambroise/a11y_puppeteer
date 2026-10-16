@@ -2,12 +2,13 @@
   "name": "a11y_puppeteer",
   "version": "1.0.0",
   "description": "",
-  "main": "crawler.js",
+  "main": "scripts/crawler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:puppeteer": "node scripts/crawler.js && node scripts/report.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["A11Y"],
+  "author": "Nicolas AMBROISE",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {

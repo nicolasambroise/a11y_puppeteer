@@ -8,7 +8,7 @@ echo 1) Dossier courant : %cd%
 
 REM 2) Lancer le script du crawler
 echo 2) Lancement du crawler...
-node crawler.js
+node scripts/crawler.js
 if %errorlevel% neq 0 (
     echo ❌ Erreur lors de l'exécution de crawler.js
     pause
@@ -17,7 +17,7 @@ if %errorlevel% neq 0 (
 
 REM 3) Générer le rapport
 echo 3) Generation du rapport...
-node report.js
+node scripts/report.js
 if %errorlevel% neq 0 (
     echo ❌ Erreur lors de l'exécution de report.js
     pause

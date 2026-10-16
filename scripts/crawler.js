@@ -14,6 +14,8 @@ const puppeteer = require('puppeteer');
 //const INPUT_FILE = 'prodV3Main.json';
 const INPUT_FILE = 'prodV3detailled.json';
 //const INPUT_FILE = 'prodV3Custom.json';
+//const INPUT_FILE = 'qualV3Custom.json';
+//const INPUT_FILE = 'qualV3detailled.json'; //from https://welcome.cms.etat.lu/api/site-list?environment=QUAL replace "link" by "url" + Add {"data":[...]}
 const OUTPUT_FILE = 'results.json';
 const CONCURRENCY = 5; // nombre de pages en parallèle
 const TIMEOUT = 120000; // timeout navigation = 2min
@@ -21,16 +23,16 @@ const TIMEOUT = 120000; // timeout navigation = 2min
 // ---------------------------------------------
 // CHARGEMENT DES DONNÉES
 // ---------------------------------------------
-const pages = JSON.parse(fs.readFileSync(INPUT_FILE, 'utf8'));
+const pages = JSON.parse(fs.readFileSync("input/"+INPUT_FILE, 'utf8'));
 const pagesObj = 'data' in pages ? pages.data : pages;
-const validPages = pagesObj.filter(p => p.status === 200);
+const validPages = pagesObj.filter(p => p.status === 200 || p.environment === "QUAL");
 
 console.log(`➡️  ${validPages.length} pages à analyser\n`);
 
 // ---------------------------------------------
 // CHARGEMENT DU SCRIPT D'AUDIT
 // ---------------------------------------------
-const auditScript = fs.readFileSync('./audit.js', 'utf8');
+const auditScript = fs.readFileSync('./scripts/audit.js', 'utf8');
 
 // ---------------------------------------------
 // EXTRACTEUR DOM (exécuté dans la page)
@@ -135,6 +137,29 @@ async function auditPage(browser, pageInfo) { //, stealthMode
       waitUntil: 'networkidle0',
       timeout: TIMEOUT
   });
+
+  /* COOKIES
+const cookies = [{
+  'name': 'cookie1',
+  'value': 'val1'
+},{
+  'name': 'cookie2',
+  'value': 'val2'
+},{
+  'name': 'cookie3',
+  'value': 'val3'
+}];
+
+await page.setCookie(...cookies);
+const cookiesSet = await page.cookies(url);
+console.log(JSON.stringify(cookiesSet));
+
+
+
+   */
+
+
+
 
 	//console.log(`- LOAD ${pageInfo.url}`);
   await page.evaluate(auditScript);

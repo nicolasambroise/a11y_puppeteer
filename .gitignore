@@ -1,10 +1,10 @@
 /node_modules
-/prodV3Main.json
+/input/prodV3Main.json
 /reports/
 /.idea
 /results.json
 /debug/*
-/prodV3Custom.json
-/prodV3detailled.json
+/input/prodV3Custom.json
+/input/prodV3detailled.json
 /package-lock.json
 /results.json

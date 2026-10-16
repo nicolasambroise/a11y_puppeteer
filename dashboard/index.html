@@ -78,6 +78,8 @@
   .trend-up {  color: #F44336; font-weight: bold; }
   .trend-down { color: #4CAF50; font-weight: bold; }
   .trend-equal { color: #999; font-weight: bold; }
+
+  a{color:black;}
   </style>
 </head>
 
@@ -85,7 +87,7 @@
 
 <h1>Dashboard Audit A11Y Renowify</h1>
 <div id="latest"></div>
-<div id="summary" class="grid grid-2"></div>
+<div id="summary" class="grid grid-3"></div>
 
 <h2>Évolution historique</h2>
 <div class="card">
@@ -168,6 +170,10 @@
 		<li>Total : <strong>${lt3}</strong></li>
         <li>Tendance : ${trendColor(diff_t3)}</li>
 	    <li>Ratio : <strong>${(Math.round(lt3/latest.totalPages * 1000) / 1000).toFixed(3)} %</strong></li>
+    </div>
+
+    <div class="card">
+       <a href="result.html">Voir le détails</a>
     </div>
   `;
   }

@@ -1,0 +1,30 @@
+stages:
+  - a11y_tests
+
+before_script:
+  - export NPM_HOME=~/.cache/node-v20.9.0-linux-x64
+  - export PATH=$NPM_HOME/bin:$PATH
+  - npm ci
+  - export HTTP_PROXY=http://cie-vproxy2.cie.etat.lu:8080
+  - export HTTPS_PROXY=http://cie-vproxy2.cie.etat.lu:8080
+  - export NO_PROXY=localhost,.etat.lu,mae.lu,.services-publics.lu,sig-gr.eu,lu.alert
+
+puppeteer:
+  stage: a11y_tests
+  image: ghcr.io/puppeteer/puppeteer:latest
+
+  allow_failure: true
+
+  script:
+    - npm run test:puppeteer
+    - REPORT=$(ls -t reports/report-*.json | head -1)
+    - echo "Report found: $REPORT"
+    - mkdir -p \\webux.gouv.etat.lu\webuxD\a11y\a11y_monitoring\reports_renowify2
+    - cp "$REPORT" \\webux.gouv.etat.lu\webuxD\a11y\a11y_monitoring\reports_renowify2\
+
+  artifacts:
+    name: "puppeteer-report-$CI_PIPELINE_ID"
+    when: always
+    expire_in: 10 days
+    paths:
+      - reports/
