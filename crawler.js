@@ -13,8 +13,8 @@ const puppeteer = require("puppeteer");
 // ---------------------------------------------
 const INPUT_FILE = path.resolve(
   __dirname,
-  process.argv[2] || "prodV3detailled.json",
-); // 'prodV3Main.json' , 'prodV3Custom.json';
+  process.argv[2] || "input/prodV3detailled.json",
+); // 'input/prodV3Main.json';
 const OUTPUT_FILE = path.join(__dirname, "results.json");
 const CONCURRENCY = 5; // nombre de pages en parallèle
 const TIMEOUT = 120000; // timeout navigation = 2min
@@ -40,74 +40,13 @@ console.log(`➡️  ${validPages.length} pages à analyser\n`);
 // ---------------------------------------------
 // CHARGEMENT DU SCRIPT D'AUDIT
 // ---------------------------------------------
+//const auditScript = "https://webux.gouv.etat.lu/a11y/a11y_renowify/static/renowify_api_test.js"
 const auditScript = fs.readFileSync(path.join(__dirname, "audit.js"), "utf8");
-
-// ---------------------------------------------
-// EXTRACTEUR DOM (exécuté dans la page)
-// ---------------------------------------------
-function getExtractor() {
-  return () => {
-    // Récupère tous les <li> du panneau
-    const items = [...document.querySelectorAll("#checkA11YPanel li")];
-    const url = document.querySelector("#site_url")?.textContent.trim();
-    const lang = document.querySelector("#site_lang")?.textContent.trim();
-    const title = document.querySelector("#site_title")?.textContent.trim();
-
-    const result = {
-      url: url,
-      lang: lang,
-      title: title,
-
-      criticity: {
-        1: [], // yellow
-        2: [], // orange
-        3: [], // red
-      },
-    };
-
-    // Check Cloudflare
-    const clf = document.querySelectorAll(
-      "div#cf-error-details, form#challenge-form",
-    );
-    if (clf.length > 0 || title === "Vérification de sécurité - V2") {
-      console.log("⚠️ Cloudflare détecté sur", url);
-      result.criticity[3].push({
-        CLF: "Captcha Cloudflare",
-      });
-
-      return result;
-    }
-
-    items.forEach((li) => {
-      const a = li.querySelector(".result-focus");
-      const msg = li.querySelector(".result-msg");
-
-      const code = a?.textContent.trim() || null;
-      const message = msg?.textContent.trim() || null;
-
-      let criticity = null;
-
-      if (a?.classList.contains("label-yellow")) criticity = 1;
-      if (a?.classList.contains("label-orange")) criticity = 2;
-      if (a?.classList.contains("label-red")) criticity = 3;
-
-      if (criticity) {
-        result.criticity[criticity].push({
-          code,
-          message,
-        });
-      }
-    });
-
-    return result;
-  };
-}
 
 // ---------------------------------------------
 // FONCTION D'AUDIT D'UNE PAGE
 // ---------------------------------------------
 async function auditPage(browser, pageInfo) {
-  //, stealthMode
   let page;
 
   const allowedMsg = [
@@ -139,6 +78,8 @@ async function auditPage(browser, pageInfo) {
   const allowedFailed = [
     "https://etat.kiss.lu",
     "https://eu.frcapi.com/api/v2/captcha",
+    "https://remap.jrc.ec.europa.eu/Consent/Simple.aspx",
+    "https://www.eurisportal.eu/"
   ];
 
   try {
@@ -188,31 +129,13 @@ async function auditPage(browser, pageInfo) {
       timeout: TIMEOUT,
     });
 
-    //console.log(`- LOAD ${pageInfo.url}`);
     await page.evaluate(auditScript);
-    //await page.addScriptTag({ content: auditScript });
 
-    await page.waitForFunction(
-      () =>
-        window.__renowifyAuditStatus === "done" ||
-        window.__renowifyAuditStatus === "error",
-      { timeout: 60_000 },
-    );
-
-    const auditStatus = await page.evaluate(() => ({
-      status: window.__renowifyAuditStatus,
-      error: window.__renowifyAuditError,
-    }));
-
-    if (auditStatus.status === "error") {
-      throw new Error(`Échec de l’audit : ${auditStatus.error}`);
-    }
-
-    await page.waitForSelector("#checkA11YPanel", { timeout: 20000 }); // 20 secondes
+    const renowifyResult = await page.evaluate(() => {
+      return window.run_renowify_static(false,false, true, false);
+    });
 
     const statusCode = response?.status() ?? 0;
-
-    const result = await page.evaluate(getExtractor());
 
     console.error(`✅ ${pageInfo.url}`);
 
@@ -222,10 +145,10 @@ async function auditPage(browser, pageInfo) {
       iso: pageInfo.iso,
       status: statusCode,
       originalTitle: pageInfo.title,
-      ...result,
+      ...renowifyResult,
+      ...convertResults(renowifyResult)
     };
   } catch (err) {
-    //await page.screenshot({ path: `debug/debug-${pageInfo.id}.png` });
     console.error(`❌ Erreur sur ${pageInfo.url}:`, err.message);
 
     return {
@@ -243,6 +166,28 @@ async function auditPage(browser, pageInfo) {
       });
     }
   }
+}
+
+function convertResults(data) {
+  const criticity = {
+    1: [],
+    2: [],
+    3: []
+  };
+
+  Object.values(data.results).forEach(items => {
+    items.forEach(item => {
+      const [level, rest] = item.split("|");
+      const [code, ...messageParts] = rest.split(" ");
+
+      criticity[level].push({
+        code,
+        message: messageParts.join(" ")
+      });
+    });
+  });
+
+  return { criticity };
 }
 
 function containsExpression(sentence, expressions) {
@@ -275,13 +220,9 @@ function requiresHeadful(url) {
 // PIPELINE PRINCIPAL
 // ---------------------------------------------
 (async () => {
-  /*const browserArgs = [
+  const browserArgs = [
     '--lang=fr',
-    '--disable-features=LocalNetworkAccess',
-    '--allow-insecure-localhost',
-    '--disable-web-security'];*/
-
-  const browserArgs = ["--lang=fr"];
+    '--disable-web-security'];
 
   const browserHeadless = await puppeteer.launch({
     headless: true,
@@ -297,9 +238,8 @@ function requiresHeadful(url) {
 
   const tasks = validPages.map((pageInfo) => {
     const useHeadful = requiresHeadful(pageInfo.url);
-
     const browser = useHeadful ? browserHeadful : browserHeadless;
-    if (useHeadful) console.log("> use Headful browser for " + pageInfo.url);
+    //if (useHeadful) console.log("> use Headful browser for " + pageInfo.url);
     return limit(() => auditPage(browser, pageInfo));
   });
 
